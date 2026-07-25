@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Super Simple Crypto · Live Cohort Checkout</title>
+    <title>Super Simple Crypto · Live Cohort</title>
     <style>
         * {
             margin: 0;
@@ -31,7 +31,6 @@
             padding: 2.4rem 2.8rem;
             box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9);
             border: 1px solid #293241;
-            transition: all 0.2s;
             position: relative;
             overflow: hidden;
         }
@@ -50,10 +49,7 @@
             z-index: 0;
         }
 
-        /* Typography */
-        h1,
-        h2,
-        h3 {
+        h1, h2, h3 {
             font-weight: 600;
             letter-spacing: -0.02em;
             position: relative;
@@ -91,14 +87,53 @@
         .subhead {
             font-size: 1.1rem;
             color: #a8b5c9;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1.5rem;
             border-left: 4px solid #f59e0b;
             padding-left: 1.2rem;
             z-index: 1;
             position: relative;
         }
 
-        /* Status Bar (Live + Spots + Countdown) */
+        /* ═══ FLYER IMAGE SECTION ═══ */
+        .flyer-container {
+            margin: 0.5rem 0 1.8rem;
+            border-radius: 1.2rem;
+            overflow: hidden;
+            border: 1px solid #2a374a;
+            box-shadow: 0 8px 30px -10px rgba(0, 0, 0, 0.6);
+            z-index: 1;
+            position: relative;
+        }
+        .flyer-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: 0.3s;
+        }
+        .flyer-container img:hover {
+            transform: scale(1.01);
+        }
+        /* Fallback if image doesn't load */
+        .flyer-placeholder {
+            background: linear-gradient(145deg, #1a2538, #0f1729);
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            color: #fcd34d;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            border: 2px dashed #3b4a60;
+        }
+        .flyer-placeholder span {
+            display: block;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            font-weight: 400;
+            margin-top: 0.3rem;
+            letter-spacing: 0.02em;
+        }
+
+        /* Status Bar */
         .status-bar {
             display: flex;
             flex-wrap: wrap;
@@ -130,15 +165,8 @@
             animation: pulse-dot 1.6s infinite;
         }
         @keyframes pulse-dot {
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-            50% {
-                opacity: 0.4;
-                transform: scale(1.4);
-            }
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.4); }
         }
 
         .spots-left {
@@ -178,7 +206,7 @@
             margin-right: 0.2rem;
         }
 
-        /* Outcomes (Benefit List) */
+        /* Outcomes */
         .outcomes-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -204,54 +232,6 @@
             flex-shrink: 0;
         }
 
-        /* Testimonials */
-        .testimonials {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            background: #0a111b;
-            border-radius: 1rem;
-            padding: 1.2rem 1.5rem;
-            border: 1px solid #25303f;
-            margin: 1.2rem 0 1.5rem;
-            z-index: 1;
-            position: relative;
-        }
-        .testimonial-item {
-            display: flex;
-            gap: 0.8rem;
-            align-items: flex-start;
-        }
-        .testimonial-item .avatar {
-            width: 38px;
-            height: 38px;
-            background: linear-gradient(135deg, #f59e0b, #b45309);
-            border-radius: 50%;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: #0b0e14;
-            font-size: 0.8rem;
-        }
-        .testimonial-item .text {
-            font-size: 0.85rem;
-            color: #cbd5e1;
-            line-height: 1.4;
-        }
-        .testimonial-item .text .stars {
-            color: #fbbf24;
-            letter-spacing: 2px;
-            font-size: 0.7rem;
-            display: block;
-        }
-        .testimonial-item .text .name {
-            font-weight: 600;
-            color: #eef2f6;
-            font-size: 0.8rem;
-        }
-
         .divider {
             border: none;
             border-top: 1px solid #1f2a3a;
@@ -263,7 +243,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1.2rem;
-            margin: 0.5rem 0 1.2rem;
+            margin: 0.5rem 0 1.5rem;
             z-index: 1;
             position: relative;
         }
@@ -302,7 +282,7 @@
             color: #eef2f6;
         }
         .pricing-card .price {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             font-weight: 700;
             color: #fcd34d;
             letter-spacing: -0.02em;
@@ -312,16 +292,6 @@
             font-size: 0.9rem;
             font-weight: 400;
             color: #94a3b8;
-        }
-        .early-bird-note {
-            font-size: 0.75rem;
-            color: #34d399;
-            background: rgba(52, 211, 153, 0.1);
-            padding: 0.1rem 0.8rem;
-            border-radius: 40px;
-            display: inline-block;
-            margin-bottom: 0.3rem;
-            border: 1px solid rgba(52, 211, 153, 0.2);
         }
         .pricing-card .perk {
             font-size: 0.85rem;
@@ -351,38 +321,33 @@
             font-size: 0.6rem;
         }
 
-        /* Bonus + Guarantee */
-        .trust-banners {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.8rem;
-            margin: 0.2rem 0 1.5rem;
-            z-index: 1;
-            position: relative;
-        }
+        /* Guarantee (only one banner now) */
         .trust-banner {
             background: #0f1729;
             border: 1px solid #25303f;
             border-radius: 0.8rem;
             padding: 0.8rem 1.2rem;
+            margin: 0.2rem 0 1.5rem;
             display: flex;
             align-items: center;
             gap: 0.8rem;
+            z-index: 1;
+            position: relative;
         }
         .trust-banner .icon {
             font-size: 1.6rem;
         }
         .trust-banner .text {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: #cbd5e1;
         }
         .trust-banner .text strong {
             color: #fcd34d;
             display: block;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
         }
 
-        /* Payment Block (Direct Contact) */
+        /* Payment Block */
         .payment-block {
             background: #0a111f;
             border-radius: 1.2rem;
@@ -392,7 +357,6 @@
             text-align: center;
             z-index: 1;
             position: relative;
-            transition: 0.2s;
         }
         .payment-block .instruction {
             font-size: 1rem;
@@ -445,7 +409,6 @@
             color: #fcd34d;
             font-weight: 700;
         }
-
         .payment-block .note {
             font-size: 0.75rem;
             color: #64748b;
@@ -477,7 +440,6 @@
             display: inline-flex;
             align-items: center;
             gap: 0.8rem;
-            letter-spacing: 0.01em;
         }
         .cta-button:hover {
             transform: scale(1.03);
@@ -520,18 +482,11 @@
                 grid-template-columns: 1fr;
                 gap: 0.3rem;
             }
-            .testimonials {
-                grid-template-columns: 1fr;
-                gap: 1.2rem;
-            }
             .pricing-grid {
                 grid-template-columns: 1fr;
             }
             .pricing-card.vip .vip-tag {
                 right: 0.8rem;
-            }
-            .trust-banners {
-                grid-template-columns: 1fr;
             }
             .status-bar {
                 flex-direction: column;
@@ -563,6 +518,10 @@
             .payment-block {
                 padding: 1.2rem 1rem;
             }
+            .flyer-placeholder {
+                font-size: 1.2rem;
+                padding: 1.5rem 1rem;
+            }
         }
         @media (max-width: 420px) {
             .course-title {
@@ -587,7 +546,21 @@
             Master Crypto with Clarity, Confidence &amp; Strategy — Without the Guesswork
         </p>
 
-        <!-- Status Bar: Live + Spots + Countdown -->
+        <!-- ═══ FLYER IMAGE (REPLACE SRC WITH YOUR OWN) ═══ -->
+        <div class="flyer-container">
+            <!-- 👇 Replace the src URL below with your actual flyer image link -->
+            <img 
+                src="https://placehold.co/860x400/1a2332/fbbf24?text=SUPER+SIMPLE+CRYPTO+FLYER" 
+                alt="Super Simple Crypto Flyer"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            />
+            <div class="flyer-placeholder" style="display:none;">
+                📢 YOUR FLYER IMAGE HERE
+                <span>Replace the 'src' in the &lt;img&gt; tag with your own image URL</span>
+            </div>
+        </div>
+
+        <!-- Status Bar -->
         <div class="status-bar">
             <div class="live-tag">
                 <span class="dot"></span> Live Class
@@ -602,7 +575,7 @@
             </div>
         </div>
 
-        <!-- Outcome-based Benefits (instead of features) -->
+        <!-- Outcomes -->
         <ul class="outcomes-grid">
             <li>Predict market turns with <strong>80%+ confidence</strong></li>
             <li>Lock in profits early without second-guessing</li>
@@ -612,35 +585,14 @@
             <li>Protect your capital &amp; sleep peacefully at night</li>
         </ul>
 
-        <!-- Testimonials (Social Proof) -->
-        <div class="testimonials">
-            <div class="testimonial-item">
-                <div class="avatar">AK</div>
-                <div class="text">
-                    <span class="stars">⭐⭐⭐⭐⭐</span>
-                    "I 10x'd my understanding in 4 weeks. The live sessions were a game-changer."
-                    <span class="name">– Alex K.</span>
-                </div>
-            </div>
-            <div class="testimonial-item">
-                <div class="avatar">JL</div>
-                <div class="text">
-                    <span class="stars">⭐⭐⭐⭐⭐</span>
-                    "From total beginner to confident trader. Worth every penny."
-                    <span class="name">– Jamie L.</span>
-                </div>
-            </div>
-        </div>
-
         <hr class="divider" />
 
-        <!-- Pricing -->
+        <!-- Pricing (Updated Fees) -->
         <div class="pricing-grid">
             <!-- Standard -->
             <div class="pricing-card">
                 <div class="plan-name">Standard</div>
-                <div class="early-bird-note">⚡ Early Bird: Save $100</div>
-                <div class="price">$700 <small>USD</small></div>
+                <div class="price">$499 <small>USD</small></div>
                 <div class="perk"><strong>4 weeks</strong> · live cohort</div>
                 <ul class="perk-list">
                     <li>Full course access</li>
@@ -653,8 +605,7 @@
             <div class="pricing-card vip">
                 <span class="vip-tag">⭐ VIP</span>
                 <div class="plan-name">VIP</div>
-                <div class="early-bird-note">⚡ Early Bird: Save $150</div>
-                <div class="price">$1,350 <small>USD</small></div>
+                <div class="price">$899 <small>USD</small></div>
                 <div class="perk"><strong>4 weeks</strong> · live cohort · premium</div>
                 <ul class="perk-list">
                     <li>Everything in Standard</li>
@@ -665,37 +616,26 @@
             </div>
         </div>
 
-        <!-- Trust Banners: Bonus + Guarantee -->
-        <div class="trust-banners">
-            <div class="trust-banner">
-                <div class="icon">🎁</div>
-                <div class="text">
-                    <strong>BONUS: Free Strategy Session</strong>
-                    First 5 sign-ups get a 1-hour 1-on-1 session ($200 value) — absolutely free.
-                </div>
-            </div>
-            <div class="trust-banner">
-                <div class="icon">🛡️</div>
-                <div class="text">
-                    <strong>100% "First Week" Risk-Free Guarantee</strong>
-                    Show up to the first live session. If it's not for you, we'll refund you fully. No questions asked.
-                </div>
+        <!-- Guarantee (Single Banner) -->
+        <div class="trust-banner">
+            <div class="icon">🛡️</div>
+            <div class="text">
+                <strong>100% "First Week" Risk-Free Guarantee</strong>
+                Show up to the first live session. If it's not for you, we'll refund you fully. No questions asked.
             </div>
         </div>
 
-        <!-- ═══ CONTACT FOR PAYMENT (UPGRADED) ═══ -->
+        <!-- ═══ CONTACT FOR PAYMENT ═══ -->
         <div class="payment-block">
             <div class="instruction">
                 Ready to secure your seat? <strong>Contact us directly</strong> to complete your payment.
             </div>
 
             <div class="contact-actions">
-                <!-- Direct Telegram Link -->
                 <a href="https://t.me/hopeuptech" target="_blank" class="contact-btn primary">
                     💬 Message us on Telegram
                     <span class="handle">@hopeuptech</span>
                 </a>
-                <!-- Copy handle / alternative -->
                 <button class="contact-btn secondary" id="copyHandleBtn">
                     📋 Copy handle
                 </button>
@@ -706,7 +646,7 @@
             </div>
         </div>
 
-        <!-- CTA Group -->
+        <!-- CTA -->
         <div class="cta-group">
             <button class="cta-button" id="joinCta">
                 Join the Next Cohort
@@ -723,29 +663,25 @@
         <div class="disclaimer">
             ⚠️ For educational purposes only. This reflects personal insights and experience.
             I am not a licensed financial advisor. &bull; Live class details shared upon enrollment.
-            Early bird pricing ends in 24 hours.
         </div>
 
     </div>
 
     <script>
         (function() {
-            // -------- COUNTDOWN TIMER (5 days from now) --------
+            // COUNTDOWN TIMER (5 days)
             function getTargetDate() {
                 const now = new Date();
-                // Set to 5 days, 23:59:59 (end of day 5) to make it feel urgent
                 const target = new Date(now);
                 target.setDate(target.getDate() + 5);
                 target.setHours(23, 59, 59, 999);
                 return target;
             }
-
             const targetDate = getTargetDate();
 
             function updateCountdown() {
                 const now = new Date().getTime();
                 const distance = targetDate.getTime() - now;
-
                 if (distance < 0) {
                     document.getElementById('days').innerText = '00';
                     document.getElementById('hours').innerText = '00';
@@ -753,76 +689,50 @@
                     document.getElementById('seconds').innerText = '00';
                     return;
                 }
-
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
                 document.getElementById('days').innerText = String(days).padStart(2, '0');
                 document.getElementById('hours').innerText = String(hours).padStart(2, '0');
                 document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
                 document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
             }
-
             updateCountdown();
             setInterval(updateCountdown, 1000);
 
-            // -------- COPY HANDLE (with feedback) --------
+            // COPY HANDLE
             const copyBtn = document.getElementById('copyHandleBtn');
             const handle = '@hopeuptech';
-
             copyBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 if (navigator.clipboard && navigator.clipboard.writeText) {
                     navigator.clipboard.writeText(handle).then(() => {
-                        const originalText = this.innerHTML;
+                        const original = this.innerHTML;
                         this.innerHTML = '✅ Copied!';
-                        setTimeout(() => { this.innerHTML = originalText; }, 2000);
-                    }).catch(() => {
-                        alert(`Copy this handle: ${handle}`);
-                    });
+                        setTimeout(() => { this.innerHTML = original; }, 2000);
+                    }).catch(() => alert(`Copy: ${handle}`));
                 } else {
-                    // Fallback
-                    const textArea = document.createElement('textarea');
-                    textArea.value = handle;
-                    document.body.appendChild(textArea);
-                    textArea.select();
-                    try {
-                        document.execCommand('copy');
-                        const originalText = this.innerHTML;
+                    const ta = document.createElement('textarea');
+                    ta.value = handle;
+                    document.body.appendChild(ta);
+                    ta.select();
+                    try { document.execCommand('copy'); 
+                        const original = this.innerHTML;
                         this.innerHTML = '✅ Copied!';
-                        setTimeout(() => { this.innerHTML = originalText; }, 2000);
-                    } catch (err) {
-                        alert(`Copy this handle: ${handle}`);
-                    }
-                    document.body.removeChild(textArea);
+                        setTimeout(() => { this.innerHTML = original; }, 2000);
+                    } catch (err) { alert(`Copy: ${handle}`); }
+                    document.body.removeChild(ta);
                 }
             });
 
-            // -------- MAIN CTA BUTTON (opens Telegram) --------
-            const joinCta = document.getElementById('joinCta');
-            joinCta.addEventListener('click', function(e) {
+            // CTA BUTTON
+            document.getElementById('joinCta').addEventListener('click', function(e) {
                 e.preventDefault();
-                // Direct them to the Telegram chat
                 window.open('https://t.me/hopeuptech', '_blank');
-
-                // Also give a subtle confirmation
                 this.innerText = 'Opening chat...';
-                setTimeout(() => {
-                    this.innerHTML = 'Join the Next Cohort <span>→</span>';
-                }, 3000);
+                setTimeout(() => { this.innerHTML = 'Join the Next Cohort <span>→</span>'; }, 3000);
             });
-
-            // Also make the primary contact button extra robust
-            const tgBtn = document.querySelector('.contact-btn.primary');
-            if (tgBtn) {
-                tgBtn.addEventListener('click', function(e) {
-                    // The href handles the navigation, but we track it
-                    // just ensure it opens in new tab (target="_blank" already)
-                });
-            }
-
         })();
     </script>
 
