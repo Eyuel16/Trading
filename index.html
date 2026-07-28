@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Super Simple Crypto · Live Cohort Checkout</title>
+    <title>Hopeup Trading · Live Cohort Checkout</title>
     <style>
         * {
             margin: 0;
@@ -98,7 +98,7 @@
             position: relative;
         }
 
-        /* Status Bar (Live + Spots only) */
+        /* Status Bar (Live + Spots) */
         .status-bar {
             display: flex;
             flex-wrap: wrap;
@@ -151,6 +151,42 @@
             border: 1px solid rgba(248, 113, 113, 0.2);
         }
 
+        /* Social Proof (alternative to testimonials) */
+        .social-proof {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.8rem;
+            font-size: 0.85rem;
+            color: #a0b3cc;
+            z-index: 1;
+            position: relative;
+        }
+        .social-proof .traders-count {
+            background: #1e293b;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .social-proof .traders-count strong {
+            color: #fcd34d;
+            font-size: 1rem;
+        }
+        .star-rating {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            color: #fbbf24;
+            letter-spacing: 2px;
+        }
+        .star-rating .rating-text {
+            color: #94a3b8;
+            margin-left: 0.2rem;
+        }
+
         /* Outcomes (Benefit List) */
         .outcomes-grid {
             display: grid;
@@ -175,54 +211,6 @@
             font-weight: 700;
             font-size: 1.1rem;
             flex-shrink: 0;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            background: #0a111b;
-            border-radius: 1rem;
-            padding: 1.2rem 1.5rem;
-            border: 1px solid #25303f;
-            margin: 1.2rem 0 1.5rem;
-            z-index: 1;
-            position: relative;
-        }
-        .testimonial-item {
-            display: flex;
-            gap: 0.8rem;
-            align-items: flex-start;
-        }
-        .testimonial-item .avatar {
-            width: 38px;
-            height: 38px;
-            background: linear-gradient(135deg, #f59e0b, #b45309);
-            border-radius: 50%;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            color: #0b0e14;
-            font-size: 0.8rem;
-        }
-        .testimonial-item .text {
-            font-size: 0.85rem;
-            color: #cbd5e1;
-            line-height: 1.4;
-        }
-        .testimonial-item .text .stars {
-            color: #fbbf24;
-            letter-spacing: 2px;
-            font-size: 0.7rem;
-            display: block;
-        }
-        .testimonial-item .text .name {
-            font-weight: 600;
-            color: #eef2f6;
-            font-size: 0.8rem;
         }
 
         .divider {
@@ -286,6 +274,16 @@
             font-weight: 400;
             color: #94a3b8;
         }
+        .early-bird-note {
+            font-size: 0.75rem;
+            color: #34d399;
+            background: rgba(52, 211, 153, 0.1);
+            padding: 0.1rem 0.8rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 0.3rem;
+            border: 1px solid rgba(52, 211, 153, 0.2);
+        }
         .pricing-card .perk {
             font-size: 0.85rem;
             color: #b9c7dd;
@@ -314,43 +312,12 @@
             font-size: 0.6rem;
         }
 
-        /* Bonus + Guarantee */
-        .trust-banners {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.8rem;
-            margin: 0.2rem 0 1.5rem;
-            z-index: 1;
-            position: relative;
-        }
-        .trust-banner {
-            background: #0f1729;
-            border: 1px solid #25303f;
-            border-radius: 0.8rem;
-            padding: 0.8rem 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-        .trust-banner .icon {
-            font-size: 1.6rem;
-        }
-        .trust-banner .text {
-            font-size: 0.8rem;
-            color: #cbd5e1;
-        }
-        .trust-banner .text strong {
-            color: #fcd34d;
-            display: block;
-            font-size: 0.85rem;
-        }
-
         /* Payment Block (Direct Contact) */
         .payment-block {
             background: #0a111f;
             border-radius: 1.2rem;
             padding: 1.4rem 2rem;
-            margin: 0.8rem 0 1.5rem;
+            margin: 1.5rem 0 1.5rem;
             border: 2px solid #3b4a60;
             text-align: center;
             z-index: 1;
@@ -364,6 +331,16 @@
         }
         .payment-block .instruction strong {
             color: #fbbf24;
+        }
+        .guarantee-line {
+            margin-top: 0.5rem;
+            font-size: 0.8rem;
+            color: #34d399;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+            font-weight: 500;
         }
 
         .contact-actions {
@@ -483,24 +460,22 @@
                 grid-template-columns: 1fr;
                 gap: 0.3rem;
             }
-            .testimonials {
-                grid-template-columns: 1fr;
-                gap: 1.2rem;
-            }
             .pricing-grid {
                 grid-template-columns: 1fr;
             }
             .pricing-card.vip .vip-tag {
                 right: 0.8rem;
             }
-            .trust-banners {
-                grid-template-columns: 1fr;
-            }
             .status-bar {
                 flex-direction: column;
                 align-items: flex-start;
                 border-radius: 20px;
                 gap: 0.4rem;
+            }
+            .social-proof {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
             }
             .cta-group {
                 flex-direction: column;
@@ -540,17 +515,27 @@
         <span class="badge">🚀 Next Cohort — Enrolling Now</span>
 
         <!-- Title -->
-        <h1 class="course-title">Super Simple Crypto<br />(Trading) System</h1>
+        <h1 class="course-title">Hopeup Trading</h1>
         <p class="subhead">
             Master Crypto with Clarity, Confidence &amp; Strategy — Without the Guesswork
         </p>
 
-        <!-- Status Bar: Live + Spots only (timer removed) -->
+        <!-- Status Bar: Live + Spots -->
         <div class="status-bar">
             <div class="live-tag">
                 <span class="dot"></span> Live Class
             </div>
             <div class="spots-left">🔥 Only 7 spots left</div>
+        </div>
+
+        <!-- New: Social Proof (replaces testimonials) -->
+        <div class="social-proof">
+            <div class="traders-count">
+                👥 <strong>500+</strong> traders enrolled
+            </div>
+            <div class="star-rating">
+                ★★★★★ <span class="rating-text">4.9/5 from our students</span>
+            </div>
         </div>
 
         <!-- Outcome-based Benefits -->
@@ -563,33 +548,14 @@
             <li>Protect your capital &amp; sleep peacefully at night</li>
         </ul>
 
-        <!-- Testimonials -->
-        <div class="testimonials">
-            <div class="testimonial-item">
-                <div class="avatar">AK</div>
-                <div class="text">
-                    <span class="stars">⭐⭐⭐⭐⭐</span>
-                    "I 10x'd my understanding in 4 weeks. The live sessions were a game-changer."
-                    <span class="name">– Alex K.</span>
-                </div>
-            </div>
-            <div class="testimonial-item">
-                <div class="avatar">JL</div>
-                <div class="text">
-                    <span class="stars">⭐⭐⭐⭐⭐</span>
-                    "From total beginner to confident trader. Worth every penny."
-                    <span class="name">– Jamie L.</span>
-                </div>
-            </div>
-        </div>
-
         <hr class="divider" />
 
-        <!-- Pricing (updated to 400 / 800, early bird notes removed) -->
+        <!-- Pricing -->
         <div class="pricing-grid">
             <!-- Standard -->
             <div class="pricing-card">
                 <div class="plan-name">Standard</div>
+                <div class="early-bird-note">⚡ Early Bird: Save $100</div>
                 <div class="price">$400 <small>USD</small></div>
                 <div class="perk"><strong>4 weeks</strong> · live cohort</div>
                 <ul class="perk-list">
@@ -603,6 +569,7 @@
             <div class="pricing-card vip">
                 <span class="vip-tag">⭐ VIP</span>
                 <div class="plan-name">VIP</div>
+                <div class="early-bird-note">⚡ Early Bird: Save $150</div>
                 <div class="price">$800 <small>USD</small></div>
                 <div class="perk"><strong>4 weeks</strong> · live cohort · premium</div>
                 <ul class="perk-list">
@@ -614,35 +581,24 @@
             </div>
         </div>
 
-        <!-- Trust Banners: Bonus + Guarantee -->
-        <div class="trust-banners">
-            <div class="trust-banner">
-                <div class="icon">🎁</div>
-                <div class="text">
-                    <strong>BONUS: Free Strategy Session</strong>
-                    First 5 sign-ups get a 1-hour 1-on-1 session ($200 value) — absolutely free.
-                </div>
-            </div>
-            <div class="trust-banner">
-                <div class="icon">🛡️</div>
-                <div class="text">
-                    <strong>100% "First Week" Risk-Free Guarantee</strong>
-                    Show up to the first live session. If it's not for you, we'll refund you fully. No questions asked.
-                </div>
-            </div>
-        </div>
-
-        <!-- Payment Block -->
+        <!-- ═══ CONTACT FOR PAYMENT (with refined guarantee) ═══ -->
         <div class="payment-block">
             <div class="instruction">
                 Ready to secure your seat? <strong>Contact us directly</strong> to complete your payment.
             </div>
 
+            <!-- New: Short, powerful guarantee inside the payment block -->
+            <div class="guarantee-line">
+                🛡️ 30-Day Money‑Back Guarantee — Love it or get a full refund.
+            </div>
+
             <div class="contact-actions">
+                <!-- Direct Telegram Link -->
                 <a href="https://t.me/hopeuptech" target="_blank" class="contact-btn primary">
                     💬 Message us on Telegram
                     <span class="handle">@hopeuptech</span>
                 </a>
+                <!-- Copy handle -->
                 <button class="contact-btn secondary" id="copyHandleBtn">
                     📋 Copy handle
                 </button>
@@ -653,23 +609,24 @@
             </div>
         </div>
 
-        <!-- CTA Group -->
+        <!-- CTA Group (stronger copy) -->
         <div class="cta-group">
             <button class="cta-button" id="joinCta">
-                Join the Next Cohort
+                I'm Ready – Join Cohort Now
                 <span>→</span>
             </button>
             <div class="cta-sub">
                 <span>💠</span>
-                <span class="fin-free">Be financially free</span>
+                <span class="fin-free">Start your journey today. Risk‑free.</span>
                 <span>💠</span>
             </div>
         </div>
 
-        <!-- Footer (timer-related sentence removed) -->
+        <!-- Footer -->
         <div class="disclaimer">
             ⚠️ For educational purposes only. This reflects personal insights and experience.
             I am not a licensed financial advisor. &bull; Live class details shared upon enrollment.
+            Early bird pricing ends in 24 hours.
         </div>
 
     </div>
@@ -713,9 +670,10 @@
             joinCta.addEventListener('click', function(e) {
                 e.preventDefault();
                 window.open('https://t.me/hopeuptech', '_blank');
+
                 this.innerText = 'Opening chat...';
                 setTimeout(() => {
-                    this.innerHTML = 'Join the Next Cohort <span>→</span>';
+                    this.innerHTML = 'I\'m Ready – Join Cohort Now <span>→</span>';
                 }, 3000);
             });
 
