@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hopeup Trading · Professional Cohort Enrollment</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #060a11;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            color: #eef2f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1.2rem;
+            line-height: 1.5;
+        }
+
+        .checkout-card {
+            max-width: 920px;
+            width: 100%;
+            background: #0e141f;
+            border-radius: 2rem;
+            padding: 2.4rem 2.8rem;
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.9);
+            border: 1px solid #293241;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .checkout-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #1a2538;
+            color: #fbbf24;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 0.35rem 1.2rem;
+            border-radius: 100px;
+            border: 1px solid #f59e0b30;
+            margin-bottom: 1rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        .course-title {
+            font-size: 2.7rem;
+            font-weight: 700;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #fcd34d, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.3rem;
+            z-index: 1;
+            position: relative;
+        }
+
+        .subhead {
+            font-size: 1.1rem;
+            color: #b9c7dd;
+            margin-bottom: 1.6rem;
+            border-left: 4px solid #f59e0b;
+            padding-left: 1.2rem;
+            z-index: 1;
+            position: relative;
+            font-weight: 400;
+        }
+
+        /* Section label used above each major block */
+        .section-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #fcd34d;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin: 2rem 0 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            z-index: 1;
+            position: relative;
+        }
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #25303f;
+        }
+        .section-label.first {
+            margin-top: 0;
+        }
+
+        /* Core program box — now the trust-building opener */
+        .core-program {
+            background: #0f1926;
+            border: 1px solid #25303f;
+            border-radius: 1rem;
+            padding: 1.2rem 1.8rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem 1.6rem;
+            align-items: center;
+            z-index: 1;
+            position: relative;
+        }
+        .core-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            font-size: 0.85rem;
+            color: #b9c7dd;
+        }
+        .core-items span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .core-items span::before {
+            content: "✓";
+            color: #34d399;
+            font-weight: 700;
+        }
+
+        /* Curriculum section */
+        .curriculum {
+            background: #0f1926;
+            border: 1px solid #25303f;
+            border-radius: 1.2rem;
+            padding: 1.5rem 1.8rem;
+            margin-bottom: 0.5rem;
+            z-index: 1;
+            position: relative;
+        }
+        .module-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem 1.5rem;
+            list-style: none;
+        }
+        .module-grid li {
+            display: flex;
+            align-items: baseline;
+            gap: 0.6rem;
+            font-size: 0.9rem;
+            color: #cfdbe9;
+        }
+        .module-grid li::before {
+            content: "▹";
+            color: #f59e0b;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 0.5rem 0;
+            z-index: 1;
+            position: relative;
+        }
+        .pricing-card {
+            background: #131c2a;
+            border-radius: 1.2rem;
+            padding: 1.8rem 1.8rem 2rem;
+            border: 1px solid #2a374a;
+            transition: 0.25s;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .pricing-card.vip {
+            border-color: #f59e0b;
+            background: #1a2538;
+            box-shadow: 0 0 25px -10px rgba(245, 158, 11, 0.2);
+        }
+        .vip-badge {
+            position: absolute;
+            top: -0.6rem;
+            right: 1.2rem;
+            background: #f59e0b;
+            color: #0b0e14;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            padding: 0.25rem 1.1rem;
+            border-radius: 100px;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
+        }
+        .plan-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #eef2f6;
+            margin-bottom: 0.1rem;
+        }
+        .price {
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #fcd34d;
+            letter-spacing: -0.02em;
+            margin: 0.1rem 0 0.4rem;
+        }
+        .price small {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: #94a3b8;
+        }
+        .price-note {
+            font-size: 0.75rem;
+            color: #34d399;
+            background: rgba(52, 211, 153, 0.08);
+            padding: 0.1rem 0.9rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 0.8rem;
+            border: 1px solid rgba(52, 211, 153, 0.15);
+        }
+        .perk-list {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9rem;
+            color: #cfdbe9;
+            flex: 1;
+        }
+        .perk-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            margin-bottom: 0.35rem;
+        }
+        .perk-list li::before {
+            content: "◆";
+            color: #f59e0b;
+            font-size: 0.6rem;
+            flex-shrink: 0;
+        }
+        .perk-list .highlight {
+            color: #fcd34d;
+            font-weight: 500;
+        }
+
+        /* Payment / enrollment block */
+        .payment-block {
+            background: #0a111f;
+            border-radius: 1.2rem;
+            padding: 1.5rem 2rem;
+            margin: 0.5rem 0;
+            border: 2px solid #3b4a60;
+            text-align: center;
+            z-index: 1;
+            position: relative;
+        }
+        .payment-block .instruction {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #eef2f6;
+        }
+        .payment-block .instruction strong {
+            color: #fbbf24;
+        }
+        .contact-actions {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0.8rem;
+            margin: 0.9rem 0 0.2rem;
+        }
+        .contact-btn {
+            background: #1e293b;
+            border: 1px solid #3b4a60;
+            padding: 0.6rem 1.8rem;
+            border-radius: 60px;
+            color: #eef2f6;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+        .contact-btn.primary {
+            background: #f59e0b;
+            border-color: #f59e0b;
+            color: #0b0e14;
+            box-shadow: 0 6px 20px -6px rgba(245, 158, 11, 0.3);
+        }
+        .contact-btn.primary:hover {
+            background: #fbbf24;
+            box-shadow: 0 10px 30px -6px rgba(245, 158, 11, 0.5);
+        }
+        .contact-btn.secondary:hover {
+            background: #2a3a50;
+            border-color: #5a7a9a;
+        }
+        .contact-btn .handle {
+            color: #fcd34d;
+            font-weight: 700;
+        }
+        .note {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 0.6rem;
+        }
+
+        /* CTA */
+        .cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            margin-top: 0.5rem;
+            z-index: 1;
+            position: relative;
+        }
+        .cta-button {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #0b0e14;
+            border: none;
+            padding: 0.9rem 2.8rem;
+            border-radius: 100px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.25s;
+            box-shadow: 0 8px 25px -10px rgba(245, 158, 11, 0.4);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            letter-spacing: 0.01em;
+        }
+        .cta-button:hover {
+            transform: scale(1.02);
+            box-shadow: 0 14px 35px -10px rgba(245, 158, 11, 0.6);
+        }
+        .cta-sub {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .cta-sub .fin-free {
+            color: #eef2f6;
+            font-weight: 500;
+        }
+
+        .disclaimer {
+            margin-top: 2rem;
+            font-size: 0.7rem;
+            color: #475569;
+            border-top: 1px solid #1a2332;
+            padding-top: 1.2rem;
+            text-align: center;
+            line-height: 1.6;
+            z-index: 1;
+            position: relative;
+        }
+
+        /* Responsive */
+        @media (max-width: 750px) {
+            .checkout-card {
+                padding: 1.5rem 1.2rem;
+            }
+            .course-title {
+                font-size: 2rem;
+            }
+            .module-grid {
+                grid-template-columns: 1fr;
+            }
+            .core-program {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .cta-button {
+                justify-content: center;
+                padding: 0.8rem 1.5rem;
+            }
+            .contact-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            .contact-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        @media (max-width: 420px) {
+            .course-title {
+                font-size: 1.6rem;
+            }
+            .subhead {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="checkout-card">
+        <!-- 1. STATUS -->
+        <span class="badge">📡 Live Cohort — Enrollment Open</span>
+
+        <!-- 2. HERO -->
+        <h1 class="course-title">Hopeup Trading</h1>
+        <p class="subhead">
+            A systematic approach to crypto trading — live, analysis-driven, and built for clarity.
+        </p>
+
+        <!-- 3. TRUST OPENER: what every seat gets, up front, before any commitment ask -->
+        <div class="section-label first">🔹 Every Enrollment Includes</div>
+        <div class="core-program">
+            <div class="core-items">
+                <span>4 weeks of live cohort sessions</span>
+                <span>Lifetime access to recordings</span>
+                <span>Private student community</span>
+                <span>Direct Q&amp;A with instructor</span>
+            </div>
+        </div>
+
+        <!-- 4. CURRICULUM: the substance, once trust is established -->
+        <div class="section-label">📘 What You'll Master</div>
+        <div class="curriculum">
+            <ul class="module-grid">
+                <li><strong>Market Foundation:</strong> Blockchain dynamics, cycles &amp; on-chain basics</li>
+                <li><strong>Technical Analysis:</strong> Price action, trends, key levels &amp; volume</li>
+                <li><strong>Risk Management:</strong> Position sizing, stop losses &amp; portfolio protection</li>
+                <li><strong>Trade Psychology:</strong> Discipline, bias control &amp; decision frameworks</li>
+                <li><strong>Live Application:</strong> Real-time chart breakdowns, trade ideas &amp; execution drills</li>
+                <li><strong>System Building:</strong> Create your personal, rule-based trading plan</li>
+            </ul>
+        </div>
+
+        <!-- 5. PRICING: the decision, once value is clear -->
+        <div class="section-label">💳 Choose Your Plan</div>
+        <div class="pricing-grid">
+            <!-- Standard -->
+            <div class="pricing-card">
+                <div class="plan-name">Standard</div>
+                <div class="price">$400 <small>USD</small></div>
+                <div class="price-note">Introductory rate</div>
+                <ul class="perk-list">
+                    <li>Full course curriculum &amp; materials</li>
+                    <li>Live cohort sessions (weekly)</li>
+                    <li>Group Q&amp;A and discussion</li>
+                    <li>Access to community channel</li>
+                    <li>Session recordings &amp; notes</li>
+                </ul>
+            </div>
+
+            <!-- VIP -->
+            <div class="pricing-card vip">
+                <span class="vip-badge">⭐ Most Popular</span>
+                <div class="plan-name">VIP</div>
+                <div class="price">$800 <small>USD</small></div>
+                <div class="price-note">Introductory rate</div>
+                <ul class="perk-list">
+                    <li><strong>Everything in Standard</strong></li>
+                    <li>2 private 1‑on‑1 mentorship sessions</li>
+                    <li class="highlight">Weekly live trade breakdowns + idea generation</li>
+                    <li>Instructor analysis — <em>you decide</em> the trade</li>
+                    <li>Exclusive advanced strategy modules</li>
+                    <li>Priority direct messaging with instructor</li>
+                    <li>VIP‑only signal &amp; discussion group</li>
+                    <li>Early access to future course updates</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 6. ENROLLMENT / PAYMENT: how to actually act on the decision above -->
+        <div class="section-label">✉️ How to Enroll</div>
+        <div class="payment-block">
+            <p class="instruction">
+                Message us your <strong>full name</strong> and <strong>chosen plan</strong> to reserve your seat — spots are confirmed on a first-come basis.
+            </p>
+            <div class="contact-actions">
+                <a href="#" class="contact-btn primary">💬 Message on Telegram <span class="handle">@HopeupTrading</span></a>
+                <a href="#" class="contact-btn secondary">✉️ Email <span class="handle">enroll@hopeuptrading.com</span></a>
+            </div>
+            <p class="note">Payment link and cohort start date are sent after your seat is confirmed.</p>
+        </div>
+
+        <!-- 7. FINAL CTA -->
+        <div class="cta-group">
+            <button class="cta-button">🚀 Reserve My Seat</button>
+            <span class="cta-sub">Limited seats · <span class="fin-free">next cohort starts soon</span></span>
+        </div>
+
+        <!-- 8. DISCLAIMER -->
+        <p class="disclaimer">
+            Hopeup Trading is an educational program. Nothing presented here is financial advice, and past results discussed in class are not a guarantee of future performance.
+            Cryptocurrency trading carries substantial risk, including the risk of loss of principal — only trade with capital you can afford to lose.
+            By enrolling you confirm you're joining for educational purposes and will make your own independent trading decisions.
+        </p>
+    </div>
+
+</body>
+</html>
