@@ -98,7 +98,7 @@
             position: relative;
         }
 
-        /* Status Bar (Live + Spots + Countdown) */
+        /* Status Bar (Live + Spots only) */
         .status-bar {
             display: flex;
             flex-wrap: wrap;
@@ -149,33 +149,6 @@
             padding: 0.2rem 1rem;
             border-radius: 40px;
             border: 1px solid rgba(248, 113, 113, 0.2);
-        }
-
-        .countdown-timer {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-left: auto;
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: #94a3b8;
-        }
-        .countdown-timer .time-block {
-            background: #1e293b;
-            padding: 0.1rem 0.6rem;
-            border-radius: 6px;
-            color: #fcd34d;
-            font-family: 'Courier New', monospace;
-            font-size: 1.1rem;
-            min-width: 2.2rem;
-            text-align: center;
-        }
-        .countdown-timer .time-label {
-            font-size: 0.6rem;
-            text-transform: uppercase;
-            color: #64748b;
-            margin-left: -0.2rem;
-            margin-right: 0.2rem;
         }
 
         /* Outcomes (Benefit List) */
@@ -312,16 +285,6 @@
             font-size: 0.9rem;
             font-weight: 400;
             color: #94a3b8;
-        }
-        .early-bird-note {
-            font-size: 0.75rem;
-            color: #34d399;
-            background: rgba(52, 211, 153, 0.1);
-            padding: 0.1rem 0.8rem;
-            border-radius: 40px;
-            display: inline-block;
-            margin-bottom: 0.3rem;
-            border: 1px solid rgba(52, 211, 153, 0.2);
         }
         .pricing-card .perk {
             font-size: 0.85rem;
@@ -539,11 +502,6 @@
                 border-radius: 20px;
                 gap: 0.4rem;
             }
-            .countdown-timer {
-                margin-left: 0;
-                width: 100%;
-                justify-content: flex-start;
-            }
             .cta-group {
                 flex-direction: column;
                 align-items: stretch;
@@ -587,22 +545,15 @@
             Master Crypto with Clarity, Confidence &amp; Strategy — Without the Guesswork
         </p>
 
-        <!-- Status Bar: Live + Spots + Countdown -->
+        <!-- Status Bar: Live + Spots only (timer removed) -->
         <div class="status-bar">
             <div class="live-tag">
                 <span class="dot"></span> Live Class
             </div>
             <div class="spots-left">🔥 Only 7 spots left</div>
-            <div class="countdown-timer">
-                <span>⏳</span>
-                <span class="time-block" id="days">00</span><span class="time-label">d</span>
-                <span class="time-block" id="hours">00</span><span class="time-label">h</span>
-                <span class="time-block" id="minutes">00</span><span class="time-label">m</span>
-                <span class="time-block" id="seconds">00</span><span class="time-label">s</span>
-            </div>
         </div>
 
-        <!-- Outcome-based Benefits (instead of features) -->
+        <!-- Outcome-based Benefits -->
         <ul class="outcomes-grid">
             <li>Predict market turns with <strong>80%+ confidence</strong></li>
             <li>Lock in profits early without second-guessing</li>
@@ -612,7 +563,7 @@
             <li>Protect your capital &amp; sleep peacefully at night</li>
         </ul>
 
-        <!-- Testimonials (Social Proof) -->
+        <!-- Testimonials -->
         <div class="testimonials">
             <div class="testimonial-item">
                 <div class="avatar">AK</div>
@@ -634,13 +585,12 @@
 
         <hr class="divider" />
 
-        <!-- Pricing -->
+        <!-- Pricing (updated to 400 / 800, early bird notes removed) -->
         <div class="pricing-grid">
             <!-- Standard -->
             <div class="pricing-card">
                 <div class="plan-name">Standard</div>
-                <div class="early-bird-note">⚡ Early Bird: Save $100</div>
-                <div class="price">$700 <small>USD</small></div>
+                <div class="price">$400 <small>USD</small></div>
                 <div class="perk"><strong>4 weeks</strong> · live cohort</div>
                 <ul class="perk-list">
                     <li>Full course access</li>
@@ -653,8 +603,7 @@
             <div class="pricing-card vip">
                 <span class="vip-tag">⭐ VIP</span>
                 <div class="plan-name">VIP</div>
-                <div class="early-bird-note">⚡ Early Bird: Save $150</div>
-                <div class="price">$1,350 <small>USD</small></div>
+                <div class="price">$800 <small>USD</small></div>
                 <div class="perk"><strong>4 weeks</strong> · live cohort · premium</div>
                 <ul class="perk-list">
                     <li>Everything in Standard</li>
@@ -683,19 +632,17 @@
             </div>
         </div>
 
-        <!-- ═══ CONTACT FOR PAYMENT (UPGRADED) ═══ -->
+        <!-- Payment Block -->
         <div class="payment-block">
             <div class="instruction">
                 Ready to secure your seat? <strong>Contact us directly</strong> to complete your payment.
             </div>
 
             <div class="contact-actions">
-                <!-- Direct Telegram Link -->
                 <a href="https://t.me/hopeuptech" target="_blank" class="contact-btn primary">
                     💬 Message us on Telegram
                     <span class="handle">@hopeuptech</span>
                 </a>
-                <!-- Copy handle / alternative -->
                 <button class="contact-btn secondary" id="copyHandleBtn">
                     📋 Copy handle
                 </button>
@@ -719,55 +666,16 @@
             </div>
         </div>
 
-        <!-- Footer -->
+        <!-- Footer (timer-related sentence removed) -->
         <div class="disclaimer">
             ⚠️ For educational purposes only. This reflects personal insights and experience.
             I am not a licensed financial advisor. &bull; Live class details shared upon enrollment.
-            Early bird pricing ends in 24 hours.
         </div>
 
     </div>
 
     <script>
         (function() {
-            // -------- COUNTDOWN TIMER (5 days from now) --------
-            function getTargetDate() {
-                const now = new Date();
-                // Set to 5 days, 23:59:59 (end of day 5) to make it feel urgent
-                const target = new Date(now);
-                target.setDate(target.getDate() + 5);
-                target.setHours(23, 59, 59, 999);
-                return target;
-            }
-
-            const targetDate = getTargetDate();
-
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const distance = targetDate.getTime() - now;
-
-                if (distance < 0) {
-                    document.getElementById('days').innerText = '00';
-                    document.getElementById('hours').innerText = '00';
-                    document.getElementById('minutes').innerText = '00';
-                    document.getElementById('seconds').innerText = '00';
-                    return;
-                }
-
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                document.getElementById('days').innerText = String(days).padStart(2, '0');
-                document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-                document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-                document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
-            }
-
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
-
             // -------- COPY HANDLE (with feedback) --------
             const copyBtn = document.getElementById('copyHandleBtn');
             const handle = '@hopeuptech';
@@ -804,24 +712,12 @@
             const joinCta = document.getElementById('joinCta');
             joinCta.addEventListener('click', function(e) {
                 e.preventDefault();
-                // Direct them to the Telegram chat
                 window.open('https://t.me/hopeuptech', '_blank');
-
-                // Also give a subtle confirmation
                 this.innerText = 'Opening chat...';
                 setTimeout(() => {
                     this.innerHTML = 'Join the Next Cohort <span>→</span>';
                 }, 3000);
             });
-
-            // Also make the primary contact button extra robust
-            const tgBtn = document.querySelector('.contact-btn.primary');
-            if (tgBtn) {
-                tgBtn.addEventListener('click', function(e) {
-                    // The href handles the navigation, but we track it
-                    // just ensure it opens in new tab (target="_blank" already)
-                });
-            }
 
         })();
     </script>
