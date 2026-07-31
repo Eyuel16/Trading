@@ -17,7 +17,7 @@
     body {
       background: #f8fafc;
       color: #0f172a;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     .container {
@@ -101,7 +101,6 @@
       font-weight: 600;
     }
     
-    /* Social Icons in Nav */
     .nav-social {
       display: flex;
       align-items: center;
@@ -337,7 +336,7 @@
       font-size: 0.95rem;
     }
 
-    /* ----- PRICING CARD (NEW) ----- */
+    /* ----- PRICING CARD ----- */
     .pricing-card {
       max-width: 480px;
       margin: 40px auto 0;
@@ -370,86 +369,6 @@
       font-size: 0.8rem;
       color: #94a3b8;
       margin-top: 16px;
-    }
-
-    /* ----- TRANSPARENCY BANNER (used in Lab page) ----- */
-    .transparency-banner {
-      background: #fffbeb;
-      border: 1px solid #fde68a;
-      border-radius: 16px;
-      padding: 20px 28px;
-      margin: 32px auto 20px;
-      max-width: 820px;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      text-align: left;
-    }
-    .transparency-banner i {
-      color: #d97706;
-      font-size: 1.6rem;
-      margin-top: 4px;
-    }
-    .transparency-banner h4 {
-      color: #92400e;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-    .transparency-banner p {
-      color: #78350f;
-      font-size: 0.95rem;
-      margin: 0;
-    }
-    .transparency-banner strong {
-      color: #b45309;
-    }
-
-    /* ----- STEPS / LAB ----- */
-    .steps {
-      background: #ffffff;
-      border-radius: 32px;
-      padding: 48px 40px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
-      border: 1px solid #eef2f6;
-    }
-    .step-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 24px;
-      margin-top: 16px;
-    }
-    .step-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .step-num {
-      background: #dbeafe;
-      color: #1d4ed8;
-      width: 48px;
-      height: 48px;
-      border-radius: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.3rem;
-      margin-bottom: 16px;
-    }
-    .step-item h4 {
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-    .step-item p {
-      color: #64748b;
-      font-size: 0.9rem;
-    }
-    .divider-line {
-      width: 100%;
-      height: 1px;
-      background: #e2e8f0;
-      margin: 24px 0;
     }
 
     /* ----- ABOUT PAGE ----- */
@@ -566,6 +485,82 @@
       font-size: 0.8rem;
     }
 
+    /* ----- CURRICULUM PAGE STYLES (New) ----- */
+    .curriculum-section {
+      background: white;
+      border-radius: 24px;
+      padding: 40px 48px;
+      margin-bottom: 40px;
+      border: 1px solid #eef2f6;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    }
+    .curriculum-section h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0f172a;
+      border-bottom: 3px solid #2563eb;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+      display: inline-block;
+    }
+    .curriculum-section h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-top: 28px;
+      margin-bottom: 12px;
+      color: #1e293b;
+    }
+    .curriculum-section h4 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      color: #2563eb;
+    }
+    .curriculum-section p {
+      color: #334155;
+      margin-bottom: 16px;
+    }
+    .curriculum-section ul, .curriculum-section ol {
+      padding-left: 24px;
+      margin-bottom: 20px;
+    }
+    .curriculum-section li {
+      color: #334155;
+      margin-bottom: 6px;
+    }
+    .curriculum-section .example-box {
+      background: #f1f5f9;
+      border-left: 4px solid #2563eb;
+      padding: 20px 24px;
+      border-radius: 12px;
+      margin: 24px 0;
+    }
+    .curriculum-section .example-box strong {
+      color: #0f172a;
+    }
+    .curriculum-section .highlight-box {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 12px;
+      padding: 16px 24px;
+      margin: 20px 0;
+    }
+    .curriculum-section .highlight-box strong {
+      color: #b45309;
+    }
+    .curriculum-section .chart-placeholder {
+      background: #f8fafc;
+      border: 2px dashed #cbd5e1;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      color: #64748b;
+      font-weight: 500;
+      margin: 20px 0;
+      font-size: 0.9rem;
+    }
+
     /* ----- FOOTER ----- */
     .footer {
       background: #0f172a;
@@ -641,14 +636,6 @@
       .about-grid {
         grid-template-columns: 1fr;
       }
-      .transparency-banner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .steps {
-        padding: 28px 16px;
-      }
       .section-title {
         font-size: 1.8rem;
       }
@@ -663,6 +650,12 @@
       }
       .contact-form {
         padding: 24px 16px;
+      }
+      .curriculum-section {
+        padding: 24px 16px;
+      }
+      .curriculum-section h2 {
+        font-size: 1.4rem;
       }
     }
   </style>
@@ -680,7 +673,6 @@
         <a href="#home" class="active" data-page="home">Home</a>
         <a href="#about" data-page="about">About</a>
         <a href="#course" data-page="course">Course</a>
-        <a href="#lab" data-page="lab">Trading Lab</a>
         <a href="#contact" data-page="contact">Contact</a>
         
         <!-- Social Quick Links -->
@@ -696,7 +688,7 @@
     </div>
   </nav>
 
-  <!-- ============ PAGE: HOME (Crypto Trading Focus) ============ -->
+  <!-- ============ PAGE: HOME ============ -->
   <section id="page-home" class="page active">
     <div class="container">
       <div class="hero">
@@ -710,16 +702,16 @@
           Learn to trade Bitcoin and major crypto assets like a professional.
         </p>
         
-        <!-- PRICING SECTION INTEGRATED INTO HERO -->
+        <!-- PRICING SECTION -->
         <div class="pricing-card">
           <div class="price">$499 <span>USD</span></div>
           <p style="color:#2563eb; font-weight:600; margin:4px 0;">One-time tuition · Lifetime access</p>
           <div class="includes">
-            <p><i class="fas fa-check-circle"></i> 6 comprehensive trading modules</p>
-            <p><i class="fas fa-check-circle"></i> Live Trading Lab (with Coinbase on-ramp)</p>
-            <p><i class="fas fa-check-circle"></i> Private community &amp; weekly market reviews</p>
+            <p><i class="fas fa-check-circle"></i> 5 comprehensive trading modules</p>
+            <p><i class="fas fa-check-circle"></i> Full technical analysis curriculum</p>
+            <p><i class="fas fa-check-circle"></i> Private community access</p>
           </div>
-          <a href="#course" class="btn-success" style="width:100%; padding:14px;">Enroll Now — Start Trading</a>
+          <a href="#course" class="btn-success" style="width:100%; padding:14px;">Enroll Now — Start Learning</a>
           <p class="note"><i class="fas fa-lock"></i> Secure checkout · 30-day money-back guarantee</p>
         </div>
 
@@ -771,8 +763,7 @@
           </div>
         </div>
         <div style="background: #e2e8f0; border-radius:24px; min-height:200px; display:flex; align-items:center; justify-content:center; color:#475569; font-weight:500; background-image: url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📊</text></svg>'); background-size:cover; background-position:center; font-size:4rem; min-height:240px;">
-          <!-- Decorative chart placeholder -->
-        </div>
+          </div>
       </div>
 
       <div style="margin-top:60px; background:#0f172a; color:white; padding:40px; border-radius:24px; text-align:center;">
@@ -786,164 +777,340 @@
     </div>
   </section>
 
-  <!-- ============ PAGE: COURSE (Curriculum) ============ -->
+  <!-- ============ PAGE: COURSE (FULL CURRICULUM) ============ -->
   <section id="page-course" class="page">
     <div class="container">
-      <h2 class="section-title">The Crypto Trading Curriculum</h2>
-      <p class="section-sub">6 technical modules. Zero fluff. Focused on execution and risk management.</p>
-
-      <div class="grid-3">
-        <div class="card">
-          <i class="fas fa-infinity"></i>
-          <h3>Module 1: Market Mechanics</h3>
-          <p>How crypto order books work. Bid/ask spread, market depth, and price discovery.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-weight-hanging"></i>
-          <h3>Module 2: Leverage & Margin</h3>
-          <p>Cross vs. Isolated margin. Calculating liquidation prices and maintaining collateral.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-exchange-alt"></i>
-          <h3>Module 3: Order Types</h3>
-          <p>Limit, Market, Stop-Loss, Take-Profit, and OCO (One-Cancels-Other) orders.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-chart-bar"></i>
-          <h3>Module 4: Technical Analysis</h3>
-          <p>Support/Resistance, RSI, MACD, Volume Profile, and VWAP for entry/exit timing.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-tasks"></i>
-          <h3>Module 5: Risk Management</h3>
-          <p>Position sizing (Kelly Criterion), risk/reward ratios, and handling drawdowns.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-laptop"></i>
-          <h3>Module 6: The Trading Lab</h3>
-          <p>Live execution walkthrough: on-ramp USDT, place a long/short trade, manage a position.</p>
-        </div>
-      </div>
-
-      <!-- Pricing reiteration -->
-      <div style="text-align:center; margin-top:40px; background:#f1f5f9; padding:32px; border-radius:24px;">
-        <h3 style="font-size:1.6rem;">Full Course Access: <span style="color:#059669;">$499 USD</span></h3>
-        <p style="color:#475569; margin-bottom:16px;">Includes all modules, the Trading Lab, and private community access.</p>
-        <a href="#" class="btn-success"><i class="fas fa-shopping-cart" style="margin-right:8px;"></i> Enroll Now</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PAGE: LAB (The Trading Lab - Crypto Focus) ============ -->
-  <section id="page-lab" class="page">
-    <div class="container">
-      <h2 class="section-title">⚡ The Trading Lab</h2>
+      <h2 class="section-title">📚 The Full Curriculum</h2>
       <p class="section-sub">
-        Move from theory to live execution. This is a <strong>bonus module</strong> included with your enrollment, 
-        where you deposit collateral (USDT) and execute a real trade using micro-lots.
+        <strong>CRYPTO TRADING FOR ABSOLUTE BEGINNERS</strong> — 5 comprehensive sections covering everything from market mechanics to trading psychology.
       </p>
 
-      <!-- Transparency Banner -->
-      <div class="transparency-banner" style="max-width:100%;">
-        <i class="fas fa-shield-alt"></i>
-        <div>
-          <h4>🔬 Lab Transparency: How we keep the course sustainable</h4>
-          <p>
-            HopeupTech Inc. charges a <strong>$499 tuition</strong> for the full curriculum. 
-            In the Lab, we recommend using <strong>Coinbase</strong> as your regulated U.S. on-ramp to 
-            buy USDT (collateral). You deposit funds <strong>into your own wallet</strong> 
-            — we never touch your capital. If you use our partner link, Coinbase pays us a 
-            small tech-education bonus <strong>at zero extra cost to you</strong> to help us 
-            improve the platform.
-          </p>
+      <!-- SECTION 1 -->
+      <div class="curriculum-section">
+        <h2>SECTION 1: INTRODUCTION</h2>
+        
+        <h3>WELCOME TO THE WORLD OF TRADING</h3>
+        <p>Whether you're here to build a new skill, generate a secondary income, or eventually trade full-time, you've taken the first step into one of the most challenging—and potentially rewarding—disciplines in the world. This course is not about "getting rich quick." It's about learning to navigate the financial markets with a clear strategy, disciplined risk management, and the right mindset.</p>
+
+        <h3>WHAT IS TRADING?</h3>
+        <p>At its simplest, trading is the act of buying and selling financial instruments with the goal of making a profit. Unlike investing, which often focuses on the long-term growth of assets, trading typically operates on shorter timeframes—anywhere from seconds to months.</p>
+        <p>Every trade is a transaction: you exchange money for an asset (a share of a company, a currency pair, a commodity contract) and later exchange it back, hopefully at a higher value.</p>
+        <p>But beneath that simplicity lies an entire ecosystem of markets, analysis methods, and human psychology. Understanding this ecosystem is what separates consistent traders from gamblers.</p>
+
+        <h3>LONG TRADING VS. SHORT TRADING</h3>
+        <p>When you trade (Futures Trading), you can profit from price movements in two directions: up and down.</p>
+        <p><strong>Long trading (buying):</strong> is what most people think of when they imagine trading. You buy a cryptocurrency, the price goes up, and you sell it for a profit. This is the simplest way to trade.</p>
+        <p><strong>Short trading (selling):</strong> is more advanced (futures trading). When you short, you are betting that the price will go down. You borrow an asset, sell it at the current price, and then buy it back later at a lower price.</p>
+        
+        <div class="example-box">
+          <strong>Example for short trading</strong><br />
+          Price: 1 BTC = 100,000 USDT<br />
+          You believe USDT is the stronger asset (BTC price will fall). You will borrow 1 BTC to buy the stronger asset (USDT). To borrow anything, you must deposit a guarantee. You deposit 100,000 USDT as collateral on your trading exchange (trading platform).<br /><br />
+          You sell 1 BTC at 100,000 USDT<br />
+          You receive 100,000 USDT (You have bought the strong asset).<br /><br />
+          <strong>Your balance right now:</strong><br />
+          Collateral: 100,000 USDT (locked)<br />
+          Cash from Sale: 100,000 USDT (in your account)<br /><br />
+          BTC price drops from 100,000 USDT to 50,000 USDT. The weak asset (BTC) lost value. The strong asset (USDT) won.<br />
+          You take 50,000 USDT from your cash pile and buy 1 BTC. You return this 1 BTC to the exchange. Your debt is cleared. The exchange unlocks your original 100,000 USDT collateral.<br /><br />
+          <strong>Profit = 50,000 USDT</strong>
         </div>
+
+        <h3>WHAT CAN YOU TRADE?</h3>
+        <p>Modern traders have access to a wide range of asset classes. The most common are:</p>
+        <ul>
+          <li><strong>Stocks (Equities):</strong> Shares of ownership in a company. Traded on exchanges like the NYSE and NASDAQ.</li>
+          <li><strong>Indices:</strong> A basket of stocks representing a market (e.g., S&P 500, FTSE 100). Trading indices gives you exposure to the overall economy.</li>
+          <li><strong>Commodities:</strong> Raw materials like gold, oil, natural gas, wheat, and coffee.</li>
+          <li><strong>Forex (Foreign Exchange):</strong> The world's largest market, where currencies are traded in pairs (e.g., EUR/USD). Open 24 hours a day during weekdays.</li>
+          <li><strong>Cryptocurrencies:</strong> Digital assets like Bitcoin and Ethereum, known for high volatility and a 24/7 market.</li>
+          <li><strong>Derivatives (CFDs, Futures, Options):</strong> Instruments whose value is derived from an underlying asset. These allow leverage but carry higher risk.</li>
+        </ul>
+        <p><em>Each market has its own personality, trading hours, and liquidity characteristics. Throughout this course, you will learn Cryptocurrency trading.</em></p>
+
+        <h3>THE ADVANTAGES OF TRADING CRYPTOCURRENCY</h3>
+        <p>Trading crypto means buying and selling digital assets (like Bitcoin or Ethereum) to profit from price movements.</p>
+        <ul>
+          <li><strong>24/7 Market Access:</strong> Crypto markets never close. This is unlike stock and forex markets, which have fixed hours and close on weekends.</li>
+          <li><strong>High Volatility = High Opportunity:</strong> Crypto prices can swing 5–20% in a single day. While risky, this volatility creates frequent opportunities for profit, both on long positions (buying low, selling high) and short positions (profiting when prices fall).</li>
+          <li><strong>Low Barrier to Entry:</strong> You can start with as little as $10, whereas many traditional brokerages require minimum deposits. Account creation is often faster and requires less personal documentation than a traditional brokerage.</li>
+          <li><strong>Direct Ownership &amp; Peer-to-Peer Trading:</strong> You can hold the actual asset in a private wallet (self-custody). No need for a broker to verify the trade. In decentralized exchanges (DEXs), you trade directly from your wallet.</li>
+          <li><strong>Transparency of the Order Book (on-chain):</strong> On decentralized and some centralized exchanges, you can see the actual flow of funds and large wallet movements in real time using blockchain explorers.</li>
+        </ul>
+
+        <h3>TYPES OF ASSETS IN CRYPTOCURRENCY</h3>
+        <p>Before you can trade, you need to know what you are trading. The cryptocurrency market contains several different types of assets, each with its own characteristics.</p>
+        <ul>
+          <li><strong>Bitcoin (BTC):</strong> The first cryptocurrency and remains the largest by market capitalization. It is often called "digital gold." Bitcoin tends to be less volatile than smaller cryptocurrencies, but it is still much more volatile than stocks or bonds. Most traders consider Bitcoin the most important cryptocurrency to watch because the entire market often follows Bitcoin's lead. When Bitcoin goes up, most other cryptocurrencies go up. When Bitcoin goes down, most others go down.</li>
+          <li><strong>Altcoins (Alternative Coins):</strong> Any cryptocurrency that is not Bitcoin is called an altcoin. This category is enormous and includes thousands of different projects. Some altcoins have very large market capitalizations, such as Ethereum (ETH), Binance Coin (BNB), Solana (SOL), Cardano (ADA), and Ripple (XRP). Others are very small and extremely risky. Altcoins tend to be more volatile than Bitcoin. They can go up 100% in a week and down 80% the next week.</li>
+          <li><strong>Tokens:</strong> While the term "coin" is often used loosely, there is a technical difference. A coin (like Bitcoin or Litecoin) has its own independent blockchain. A token is built on top of an existing blockchain, most commonly Ethereum. Tokens represent assets or utilities within a specific project. Examples include Uniswap (UNI), Chainlink (LINK), and Aave (AAVE). For trading purposes, the distinction between coins and tokens is not critical. Both can be traded using technical analysis.</li>
+          <li><strong>Stablecoins:</strong> Stablecoins are cryptocurrencies designed to maintain a stable price, usually pegged to the US dollar. Examples include USDT (Tether), USDC (USD Coin), and DAI. Stablecoins do not go up or down in value relative to the dollar. They are not useful for trading profits, but they are extremely useful for moving money between exchanges and for parking your cash when you are not in a trade. Think of stablecoins as the cash account of the crypto world.</li>
+        </ul>
+        <div class="highlight-box">
+          <strong>What you should trade as a beginner:</strong> Start with Bitcoin and Ethereum. These are the largest, most liquid, and most widely followed cryptocurrencies. They are less likely to have extreme, unpredictable price swings caused by a single person or a small group. Once you are consistently profitable trading Bitcoin and Ethereum, you can consider adding larger altcoins like Solana or Cardano. Avoid small, unknown cryptocurrencies until you have at least six months of profitable trading experience.
+        </div>
+
+        <h3>THE DIFFERENT STYLES OF TRADING</h3>
+        <ul>
+          <li><strong>Scalping:</strong> Holding positions for seconds to minutes. High intensity, many trades, profits from very small price moves.</li>
+          <li><strong>Day Trading:</strong> Opening and closing trades within the same session. No overnight risk. Suits those who can watch the screens actively.</li>
+          <li><strong>Swing Trading:</strong> Holding for several days to capture "swings" in price. A popular style for people with day jobs.</li>
+          <li><strong>Position Trading:</strong> Multi-week or multi-month holds, closer to investing but still based on technical and macro trends.</li>
+        </ul>
+
+        <h3>TRADING VS. INVESTING</h3>
+        <p>Trading and investing are not the same thing, even though beginners often use the words interchangeably.</p>
+        <p><strong>Investing</strong> means buying an asset with the expectation that it will increase in value over a long period of time, usually years or decades. An investor buys Bitcoin and holds it for five years. An investor buys Ethereum and does not care if it goes up or down next week. Investors are concerned with fundamentals, such as whether the technology is good and whether the project will survive.</p>
+        <p><strong>Trading</strong> means buying and selling assets over shorter timeframes, from minutes to months, with the goal of capturing price movements. A trader buys Bitcoin today and sells it next week for a profit. A trader does not care whether the technology is good. The trader only cares about the price movement.</p>
+        <p><em>This course is about trading, not investing.</em></p>
+
+        <h3>FUNDAMENTAL VS. TECHNICAL ANALYSIS</h3>
+        <ul>
+          <li><strong>Fundamental Analysis:</strong> Evaluating the intrinsic value of an asset by examining economic data, earnings reports, interest rates, geopolitics, and industry trends. For example, a forex trader might watch central bank decisions; a stock trader will track company earnings.</li>
+          <li><strong>Technical Analysis:</strong> The study of price charts, volume, and patterns. You'll learn to identify trends, support/resistance, and use indicators to time your entries and exits. It's based on the idea that all available information is already reflected in the price.</li>
+        </ul>
+        <p><em>Most short-term traders lean heavily on technicals. This course will teach you how to trade using only technical analysis.</em></p>
+
+        <h3>WHAT YOU'LL LEARN IN THIS COURSE</h3>
+        <ul>
+          <li>Understand how major markets operate.</li>
+          <li>Read candlestick charts and identify key price levels.</li>
+          <li>Apply a repeatable trading strategy with clear entry and exit rules.</li>
+          <li>Build a risk management plan that protects your capital.</li>
+          <li>Develop a trader's journal to continuously improve.</li>
+        </ul>
+
+        <h3>A FINAL WORD BEFORE WE BEGIN</h3>
+        <p>Trading is not a mystery reserved for Wall Street insiders. With today's technology, anyone can participate—but access doesn't equal success. Success comes from treating trading as a serious craft: one that requires education, practice, and patience.</p>
+        <p><strong>The goal is not to make money on the next trade. The goal is to become the kind of trader who can extract consistent profits over the next hundred trades.</strong></p>
+        <p>Let's get started.</p>
       </div>
 
-      <div class="steps">
-        <div class="step-grid">
-          <div class="step-item">
-            <div class="step-num">1</div>
-            <h4>📘 Enroll & Study</h4>
-            <p>Complete Modules 1–5 so you understand leverage, margin, and risk.</p>
-          </div>
-          <div class="step-item">
-            <div class="step-num">2</div>
-            <h4>💰 On-Ramp USDT</h4>
-            <p>Use our Coinbase link to buy ~$100 USDT. Use a <strong>debit card</strong> to skip holds.</p>
-          </div>
-          <div class="step-item">
-            <div class="step-num">3</div>
-            <h4>🔗 Fund a Trading Platform</h4>
-            <p>Transfer USDT to a regulated U.S. exchange (we guide you through it).</p>
-          </div>
-          <div class="step-item">
-            <div class="step-num">4</div>
-            <h4>📊 Execute Your First Trade</h4>
-            <p>Place a micro-lot long or short on BTC. Set a stop-loss. Watch the mechanics live.</p>
-          </div>
-        </div>
+      <!-- SECTION 2 -->
+      <div class="curriculum-section">
+        <h2>SECTION 2: TECHNICAL ANALYSIS</h2>
+        <h3>A COMPLETE BEGINNER'S INTRODUCTION</h3>
+        <p>Technical analysis is the study of past price movements to predict future price movements. It is not magic. It is not a guarantee. It is simply the observation that markets behave in predictable patterns because the people in those markets behave in predictable ways.</p>
+        <p>When you look at a price chart, you are looking at a record of human decisions. Every price point represents a moment when someone decided to buy and someone decided to sell. Fear, greed, hope, and panic are written into every line of that chart. Technical analysis is the tool that helps you read those emotions.</p>
+        
+        <h4>What technical analysis is NOT:</h4>
+        <ul>
+          <li>It is not a crystal ball. It cannot tell you exactly what will happen.</li>
+          <li>It is not fundamental analysis. You do not need to read white papers or study teams.</li>
+          <li>It is not easy money. It requires study, practice, and discipline.</li>
+        </ul>
+        <h4>What technical analysis IS:</h4>
+        <ul>
+          <li>A way to tilt the odds in your favor.</li>
+          <li>A method for making rational decisions instead of emotional ones.</li>
+          <li>A skill that improves with practice, just like playing a musical instrument.</li>
+        </ul>
 
-        <div class="divider-line"></div>
+        <h3>THE THREE CORE BELIEFS</h3>
+        <p><strong>History repeats itself:</strong> Human beings are predictable creatures. When the price of a cryptocurrency drops quickly, people get scared and sell. When the price rises quickly, people get greedy and buy. These emotional reactions have not changed for centuries, and they will not change anytime soon. Because human behavior repeats, price patterns also repeat.</p>
+        <p><strong>The market discounts everything:</strong> All available information is already reflected in the current price. By the time you read a news article about a new partnership or a regulatory crackdown, the price has already moved. You do not need to follow the news. The chart already knows everything that matters.</p>
+        <p><strong>Prices move in trends:</strong> Prices do not bounce around randomly. Instead, they tend to move in one direction for a period of time. Once an uptrend begins, it is more likely to continue than to reverse. "The trend is your friend."</p>
 
-        <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:16px;">
-          <div style="display:flex; align-items:center; gap:12px;">
-            <i class="fas fa-check-circle" style="color:#059669; font-size:1.6rem;"></i>
-            <div>
-              <strong style="font-size:1rem;">Your USDT is always yours.</strong>
-              <p style="margin:0; color:#475569; font-size:0.9rem;">You control the keys. Withdraw anytime.</p>
-            </div>
-          </div>
-          <div style="display:flex; gap:12px; flex-wrap:wrap;">
-            <span style="background:#e2e8f0; padding:4px 16px; border-radius:40px; font-size:0.85rem; font-weight:600;">Coinbase</span>
-            <span style="background:#e2e8f0; padding:4px 16px; border-radius:40px; font-size:0.85rem; font-weight:600;">USDT Collateral</span>
-            <span style="background:#e2e8f0; padding:4px 16px; border-radius:40px; font-size:0.85rem; font-weight:600;">Micro-Lots</span>
-          </div>
-        </div>
+        <h3>CHARTS</h3>
+        <h4>The Line Chart</h4>
+        <p>A line chart is created by taking the closing price of each time period and connecting those prices with a single continuous line. Its strength is simplicity, but it hides important details like highs and lows. Most active traders do not use line charts as their primary chart.</p>
+        
+        <h4>The Candlestick Chart</h4>
+        <p>Each candlestick represents one period of time (1 minute, 1 hour, 1 day, etc.). Every candle tells you four pieces of information: the opening price, the closing price, the highest price, and the lowest price.</p>
+        <ul>
+          <li><strong>The Body:</strong> Shows the difference between the open and close. Green (or white) means buyers won; red (or black) means sellers won.</li>
+          <li><strong>The Upper Wick (Shadow):</strong> The highest price reached during the period.</li>
+          <li><strong>The Lower Wick (Shadow):</strong> The lowest price reached during the period.</li>
+        </ul>
 
-        <div style="text-align:center; margin-top:32px;">
-          <a href="#" class="btn-warning" style="font-size:1.2rem; padding:16px 48px;">
-            <i class="fas fa-rocket" style="margin-right:10px;"></i> Start the Trading Lab
-          </a>
-          <p style="margin-top:12px; font-size:0.8rem; color:#94a3b8;">
-            Lab access is included with the $499 course enrollment.
-            <br><strong>Disclaimer:</strong> Trading involves significant risk of loss. Only trade with risk capital.
-          </p>
-        </div>
+        <h3>MARKET STRUCTURE</h3>
+        <h4>Swing Highs and Swing Lows</h4>
+        <p><strong>Swing High:</strong> A price peak that is higher than the prices immediately before and after it. <strong>Swing Low:</strong> A price trough that is lower than the prices immediately before and after it.</p>
+        <div class="chart-placeholder">[ Visual: Swing Highs and Swing Lows illustration ]</div>
+
+        <h4>Uptrend, Downtrend, and Sideways</h4>
+        <p><strong>Uptrend:</strong> A series of higher swing highs and higher swing lows. Bulls (buyers) are in control.</p>
+        <p><strong>Downtrend:</strong> A series of lower swing highs and lower swing lows. Bears (sellers) are in control.</p>
+        <p><strong>Sideways Market (Range):</strong> The price bounces between a support level and a resistance level.</p>
+        <div class="chart-placeholder">[ Visual: Uptrend, Downtrend, Range illustrations ]</div>
+
+        <h4>Trend Reversals vs. Pullbacks</h4>
+        <p><strong>Pullback:</strong> A temporary move against the prevailing trend, followed by a continuation in the original direction.</p>
+        <p><strong>Reversal:</strong> A change in the overall direction of price—trend shifts from up to down or down to up.</p>
+
+        <h3>SUPPORT AND RESISTANCE</h3>
+        <p><strong>Support:</strong> A price level at which the price tends to stop falling and bounce back up.</p>
+        <p><strong>Resistance:</strong> A price level at which the price tends to stop rising and fall back down.</p>
+        <p><strong>Role Reversal:</strong> After a support level is broken, it often becomes a resistance level. After a resistance level is broken, it often becomes a support level.</p>
+        <div class="chart-placeholder">[ Visual: Support, Resistance, and Role Reversal ]</div>
+
+        <h4>Breakouts and Breakdowns</h4>
+        <p><strong>Breakout:</strong> Price breaks above resistance. Bullish signal. The old resistance often becomes new support.</p>
+        <p><strong>Breakdown:</strong> Price breaks below support. Bearish signal. The old support often becomes new resistance.</p>
+        <p><strong>Protecting from false breakouts:</strong> Wait for the price to <em>close</em> beyond the level, or wait for a retest of the level.</p>
+
+        <h3>TRENDLINES AND CHANNELS</h3>
+        <p><strong>Trendline:</strong> A diagonal line drawn along the swing lows of an uptrend or the swing highs of a downtrend. Shows the angle and strength of the trend.</p>
+        <p><strong>Channel:</strong> Two parallel trendlines. Price bounces between them.</p>
+        <ul>
+          <li><strong>Ascending Channel:</strong> Slopes upward. Buy near lower line, sell near upper line.</li>
+          <li><strong>Descending Channel:</strong> Slopes downward. Sell near upper line, buy back near lower (if shorting).</li>
+          <li><strong>Horizontal Channel (Rectangle):</strong> Sideways range.</li>
+        </ul>
+
+        <h3>CHART PATTERNS</h3>
+        <h4>Reversal Patterns</h4>
+        <p><strong>Head and Shoulders (Top):</strong> Signals an uptrend is ending. Reliability ~85%. The middle peak is the head, the outside peaks are shoulders.</p>
+        <p><strong>Inverse Head and Shoulders (Bottom):</strong> Signals a downtrend is ending.</p>
+        <p><strong>Double Top:</strong> Looks like an 'M'. Price fails to break a high twice, then reverses down.</p>
+        <p><strong>Double Bottom:</strong> Looks like a 'W'. Price fails to break a low twice, then reverses up.</p>
+        <p><strong>Triple Top/Bottom:</strong> Three touches of the same level before reversing. Stronger signal than double.</p>
+
+        <h4>Continuation Patterns</h4>
+        <p><strong>Ascending Triangle:</strong> Bullish continuation. Flat resistance, rising support. Buyers are getting more aggressive.</p>
+        <p><strong>Descending Triangle:</strong> Bearish continuation. Flat support, falling resistance. Sellers are getting more aggressive.</p>
+        <p><strong>Symmetrical Triangle:</strong> Both highs and lows converging. Breakout usually continues in the direction of the prior trend.</p>
+        <p><strong>Bull Flag / Bear Flag:</strong> Sharp move (flagpole) followed by a consolidation (flag), then breakout in the original direction.</p>
+        <p><strong>Pennant:</strong> Similar to a flag, but the consolidation forms a small symmetrical triangle.</p>
+        <p><strong>Rectangle (Consolidation):</strong> Horizontal channel. Breakout usually continues in the direction of the prior trend.</p>
+
+        <h3>THE MOVING AVERAGE</h3>
+        <p><strong>Simple Moving Average (SMA):</strong> Average of closing prices over a specific period.</p>
+        <p><strong>Exponential Moving Average (EMA):</strong> Gives more weight to recent prices. Reacts faster. Preferred by crypto traders.</p>
+        <h4>Using the Moving Average to Determine Trend Direction</h4>
+        <ul>
+          <li>If the price is <strong>above</strong> the moving average, the trend is <strong>up</strong>.</li>
+          <li>If the price is <strong>below</strong> the moving average, the trend is <strong>down</strong>.</li>
+        </ul>
+        <h4>Dynamic Support and Resistance</h4>
+        <p>In an uptrend, the price often pulls back to the MA and bounces. In a downtrend, the price often rallies to the MA and bounces down. The 50-period and 200-period EMAs are the most popular.</p>
+        <h4>Moving Average Crossovers</h4>
+        <p><strong>Golden Cross:</strong> Short-term MA crosses <em>above</em> long-term MA. Bullish.</p>
+        <p><strong>Death Cross:</strong> Short-term MA crosses <em>below</em> long-term MA. Bearish.</p>
+
+        <h3>MULTIPLE TIME FRAME ANALYSIS</h3>
+        <p><strong>Why one timeframe is not enough:</strong> Each timeframe tells a different story. Longer timeframes tell you the <strong>direction</strong>. Shorter timeframes tell you the <strong>timing</strong>.</p>
+        <p><strong>The Three-Time Frame Method:</strong></p>
+        <ul>
+          <li><strong>Long-term (Trend):</strong> Daily chart. Determine the overall trend.</li>
+          <li><strong>Trading (Setup):</strong> 4-hour chart. Identify patterns and plan entry.</li>
+          <li><strong>Entry (Trigger):</strong> 1-hour chart. Wait for the exact trigger to enter.</li>
+        </ul>
+        <p><strong>Common Mistakes:</strong> Looking at too many timeframes, trading against the longer timeframe, placing stop losses too tight on the entry timeframe.</p>
       </div>
+
+      <!-- SECTION 3 -->
+      <div class="curriculum-section">
+        <h2>SECTION 3: RISK MANAGEMENT</h2>
+        <h3>WHY RISK MANAGEMENT MATTERS MORE THAN ANYTHING ELSE</h3>
+        <p>You can be the best technical analyst in the world. You can identify every pattern correctly. But if you do not manage your risk, you will eventually lose all your money.</p>
+        <p>Every trader loses trades. Even the best traders in the world lose forty to fifty percent of their trades. The difference between a profitable trader and a losing trader is not how often they are right. It is how much they lose when they are wrong and how much they make when they are right.</p>
+        <p><strong>Risk management is the art of losing small.</strong> You want your losses to be tiny and your wins to be large. This is called having a positive risk-to-reward ratio.</p>
+
+        <h3>THE STOP LOSS</h3>
+        <p>A stop loss is an order you place that automatically sells your cryptocurrency if the price drops to a certain level. You do not have to watch the chart. You do not have to make a decision at the moment. The stop loss executes automatically.</p>
+        <p>Without a stop loss, a single bad trade could lose fifty percent or more of your money. A stop loss removes emotion from the equation.</p>
+
+        <h3>THE 1% RULE FOR POSITION SIZING</h3>
+        <p>The 1% rule states that you should never risk more than one percent of your total trading account on a single trade.</p>
+        <p><strong>Why one percent?</strong> Because if you risk one percent per trade, you can lose ten trades in a row and still have ninety percent of your money left. If you risk ten percent per trade, three losses in a row would lose thirty percent of your money, and ten losses in a row would wipe you out completely.</p>
+
+        <h3>THE GOLDEN RULE OF RISK MANAGEMENT</h3>
+        <div class="highlight-box">
+          <strong>Never risk more than you are willing to lose.</strong>
+        </div>
+        <p>The money you use for trading should be money you can lose completely without changing your life. Start small. Prove you can be profitable with tiny amounts. Then, and only then, consider adding more capital.</p>
+      </div>
+
+      <!-- SECTION 4 -->
+      <div class="curriculum-section">
+        <h2>SECTION 4: TRADING PLAN</h2>
+        <h3>WHY YOU NEED A WRITTEN TRADING PLAN</h3>
+        <p>A trading plan is a written document that contains all your rules. It tells you exactly what to do in every situation. When you have a trading plan, you do not have to make decisions in the heat of the moment. You simply follow the plan.</p>
+        <p><strong>A trading plan is the difference between gambling and trading.</strong> Gamblers make decisions based on emotion. Traders follow a plan.</p>
+
+        <h3>THE SEVEN COMPONENTS OF A TRADING PLAN</h3>
+        <ol>
+          <li><strong>Markets:</strong> Which cryptocurrencies will you trade? (e.g., Bitcoin and Ethereum only).</li>
+          <li><strong>Timeframe:</strong> Which timeframe is your primary trading timeframe? (e.g., 4-hour chart).</li>
+          <li><strong>Entry Rules:</strong> What must happen for you to enter a trade? Be specific.</li>
+          <li><strong>Stop Loss Rules:</strong> Where to place your stop loss.</li>
+          <li><strong>Position Sizing Rules:</strong> The percentage of your account you are willing to risk per trade.</li>
+          <li><strong>Take Profit Rules:</strong> A strategy to exit a winning trade.</li>
+          <li><strong>Daily and Weekly Rules:</strong> Rules that are not about individual trades (e.g., stop after 3 losses).</li>
+        </ol>
+
+        <h3>A SAMPLE TRADING PLAN FOR BEGINNERS</h3>
+        <ul>
+          <li><strong>Markets:</strong> Bitcoin (BTC) and Ethereum (ETH) only.</li>
+          <li><strong>Timeframe:</strong> 4-hour chart for setup, Daily for trend, 1-hour for entry.</li>
+          <li><strong>Entry (Long only):</strong> Daily above 200 EMA. Bull flag on 4H. Breakout on 1H.</li>
+          <li><strong>Stop Loss:</strong> 5% below entry OR below recent swing low (whichever is wider).</li>
+          <li><strong>Position Sizing:</strong> Risk exactly 1% per trade.</li>
+          <li><strong>Take Profit:</strong> Trailing stop set at 5%. Move stop to breakeven after 10% profit.</li>
+          <li><strong>Daily/Weekly Rules:</strong> Stop after 3 losses (2-day break). Stop after 3 wins (1-day break). Review journal every Sunday.</li>
+        </ul>
+
+        <h3>BACKTESTING YOUR TRADING PLAN</h3>
+        <p>Before you use real money, backtest your trading plan by applying your rules to historical data. Scroll back one year, move forward candle by candle, and record every hypothetical trade. A win rate of 50% with a risk-to-reward ratio of 1:2 will make you profitable.</p>
+      </div>
+
+      <!-- SECTION 5 -->
+      <div class="curriculum-section">
+        <h2>SECTION 5: TRADING PSYCHOLOGY</h2>
+        <h3>THE FOUR MOST DANGEROUS EMOTIONS</h3>
+        <ul>
+          <li><strong>Fear:</strong> Causes you to panic and sell at the worst possible moment.</li>
+          <li><strong>Greed:</strong> Causes you to buy at the top because you don't want to miss out.</li>
+          <li><strong>Revenge:</strong> Causes you to double down after a loss to try to win it back (revenge trading).</li>
+          <li><strong>Hope:</strong> Causes you to hold losing trades far too long, hoping they will turn around.</li>
+        </ul>
+
+        <h3>RULES TO PROTECT YOURSELF FROM YOUR EMOTIONS</h3>
+        <ul>
+          <li><strong>Stop after three consecutive losses:</strong> Your emotions are fried. Walk away for the rest of the day.</li>
+          <li><strong>Stop after three consecutive wins:</strong> Overconfidence leads to taking bigger risks. Walk away and come back fresh.</li>
+          <li><strong>Take a ten-minute break every hour.</strong></li>
+          <li><strong>Keep a trading journal:</strong> Write down every trade (entry, exit, why, emotions). Review weekly.</li>
+          <li><strong>Never check charts before bed.</strong></li>
+        </ul>
+      </div>
+
+      <!-- Final CTA on Course Page -->
+      <div style="text-align:center; margin-top:40px; background:#f1f5f9; padding:32px; border-radius:24px;">
+        <h3 style="font-size:1.6rem;">Full Course Access: <span style="color:#059669;">$499 USD</span></h3>
+        <p style="color:#475569; margin-bottom:16px;">Includes all 5 sections, lifetime access, and private community support.</p>
+        <a href="#" class="btn-success"><i class="fas fa-shopping-cart" style="margin-right:8px;"></i> Enroll Now</a>
+      </div>
+
     </div>
   </section>
 
-  <!-- ============ PAGE: CONTACT (with Telegram, WhatsApp, Email) ============ -->
+  <!-- ============ PAGE: CONTACT ============ -->
   <section id="page-contact" class="page">
     <div class="container">
       <h2 class="section-title">Get in Touch</h2>
       <p class="section-sub">
-        Have questions about the curriculum, the Lab, or enrollment? Reach out to us directly.
+        Have questions about the curriculum or enrollment? Reach out to us directly.
       </p>
 
       <div class="contact-wrapper">
-        <!-- Contact Form -->
         <div class="contact-form">
           <form action="#" method="post">
             <label for="name">Full Name</label>
             <input type="text" id="name" placeholder="e.g. Alex Johnson" />
-
             <label for="email">Email Address</label>
             <input type="email" id="email" placeholder="alex@example.com" />
-
             <label for="subject">Subject</label>
-            <input type="text" id="subject" placeholder="Question about the Trading Lab" />
-
+            <input type="text" id="subject" placeholder="Question about the course" />
             <label for="message">Message</label>
             <textarea id="message" rows="4" placeholder="Tell us what you need..."></textarea>
-
             <button type="submit" class="btn-primary" style="width:100%; margin-top:20px;">
               <i class="fas fa-paper-plane" style="margin-right:8px;"></i> Send Message
             </button>
           </form>
         </div>
 
-        <!-- Direct Contact (Social & Email) -->
         <div class="contact-direct">
           <h3><i class="fas fa-headset" style="color:#2563eb;"></i> Reach Us Instantly</h3>
           <p style="color:#64748b;">We reply within 24 hours, usually faster on Telegram &amp; WhatsApp.</p>
@@ -982,13 +1149,12 @@
         <a href="mailto:support@hopeuptech.com" title="Email"><i class="fas fa-envelope"></i></a>
       </div>
 
-      <p>Teaching U.S. traders the mechanics of crypto — leverage, order books, and risk management.</p>
+      <p>Teaching U.S. traders the mechanics of crypto — order books, leverage, and risk management.</p>
 
       <div class="disclaimer">
         <strong>⚠️ High-Risk Disclaimer:</strong> Crypto trading is highly leveraged and carries a substantial risk of loss.
         It is not suitable for all investors. HopeupTech Inc. provides educational content only. We are not a financial advisor,
         broker, or registered investment firm. Always DYOR (Do Your Own Research) and consult a licensed professional.
-        By using our partner exchange link, you acknowledge that HopeupTech may receive a referral commission at no extra cost to you.
       </div>
 
       <div style="display:flex; gap:24px; margin-top:12px; font-size:0.85rem; flex-wrap:wrap; justify-content:center;">
@@ -1007,7 +1173,6 @@
         home: document.getElementById('page-home'),
         about: document.getElementById('page-about'),
         course: document.getElementById('page-course'),
-        lab: document.getElementById('page-lab'),
         contact: document.getElementById('page-contact')
       };
 
