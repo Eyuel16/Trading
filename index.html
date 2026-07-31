@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hopeup Trading · Free Crypto Course for Beginners</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ----- NAVIGATION ----- */
+    .navbar {
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .navbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #0ea5e9, #2563eb);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .logo span {
+      font-weight: 300;
+      color: #334155;
+      -webkit-text-fill-color: #334155;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #334155;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: #2563eb; }
+
+    .btn-outline-nav {
+      background: transparent;
+      border: 1.5px solid #2563eb;
+      color: #2563eb;
+      padding: 8px 20px;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-outline-nav:hover {
+      background: #2563eb;
+      color: white;
+    }
+
+    /* ----- BUTTONS ----- */
+    .btn-primary {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 14px 36px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.35);
+    }
+
+    .btn-secondary {
+      background: #f1f5f9;
+      color: #0f172a;
+      border: 1px solid #e2e8f0;
+      padding: 14px 36px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      cursor: pointer;
+      transition: 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-secondary:hover {
+      background: #e2e8f0;
+      border-color: #94a3b8;
+    }
+
+    .btn-success {
+      background: #059669;
+      color: white;
+      border: none;
+      padding: 14px 36px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      cursor: pointer;
+      transition: 0.2s;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 8px 18px rgba(5, 150, 105, 0.25);
+    }
+    .btn-success:hover {
+      background: #047857;
+      transform: translateY(-2px);
+    }
+
+    /* ----- HERO ----- */
+    .hero {
+      padding: 60px 0 40px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      background: #dbeafe;
+      color: #1d4ed8;
+      padding: 6px 18px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 20px;
+      letter-spacing: 0.3px;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+    .hero h1 .highlight {
+      background: linear-gradient(135deg, #2563eb, #06b6d4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #475569;
+      max-width: 680px;
+      margin: 0 auto 36px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    /* ----- TRANSPARENCY BANNER (Critical) ----- */
+    .transparency-banner {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 16px;
+      padding: 20px 28px;
+      margin: 32px auto 20px;
+      max-width: 820px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      text-align: left;
+    }
+    .transparency-banner i {
+      color: #d97706;
+      font-size: 1.6rem;
+      margin-top: 4px;
+    }
+    .transparency-banner h4 {
+      color: #92400e;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .transparency-banner p {
+      color: #78350f;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+    .transparency-banner strong {
+      color: #b45309;
+    }
+
+    /* ----- SECTIONS ----- */
+    section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    .section-sub {
+      text-align: center;
+      color: #64748b;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto 48px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      padding: 32px 24px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      border: 1px solid #f1f5f9;
+      transition: 0.25s ease;
+      text-align: center;
+    }
+    .card:hover {
+      border-color: #b9d0f8;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+      transform: translateY(-4px);
+    }
+    .card i {
+      font-size: 2.4rem;
+      color: #2563eb;
+      margin-bottom: 16px;
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+    .card p {
+      color: #64748b;
+      font-size: 0.95rem;
+    }
+
+    /* ----- HOW IT WORKS (STEPS) ----- */
+    .steps {
+      background: #ffffff;
+      border-radius: 32px;
+      padding: 48px 40px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+      border: 1px solid #eef2f6;
+    }
+
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-top: 16px;
+    }
+    .step-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .step-num {
+      background: #dbeafe;
+      color: #1d4ed8;
+      width: 48px;
+      height: 48px;
+      border-radius: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+    .step-item h4 {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .step-item p {
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    .divider-line {
+      width: 100%;
+      height: 1px;
+      background: #e2e8f0;
+      margin: 24px 0;
+    }
+
+    /* ----- FAQ ----- */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .faq-item h4 {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+    .faq-item p {
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    /* ----- FOOTER ----- */
+    .footer {
+      background: #0f172a;
+      color: #cbd5e1;
+      padding: 40px 0 24px;
+      margin-top: 20px;
+      border-top: 1px solid #1e293b;
+    }
+    .footer .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      text-align: center;
+    }
+    .footer .logo {
+      background: linear-gradient(135deg, #7dd3fc, #60a5fa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .footer p {
+      font-size: 0.85rem;
+      max-width: 600px;
+    }
+    .footer .disclaimer {
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      width: 100%;
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.4rem; }
+      .hero p { font-size: 1.05rem; }
+      .navbar .container { flex-direction: column; gap: 12px; }
+      .nav-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .transparency-banner { flex-direction: column; align-items: center; text-align: center; }
+      .steps { padding: 28px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="navbar">
+  <div class="container">
+    <div class="logo">Hopeup<span>Trading</span></div>
+    <div class="nav-links">
+      <a href="#curriculum">Curriculum</a>
+      <a href="#howitworks">How It Works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#" class="btn-outline-nav"><i class="fas fa-user-plus" style="margin-right: 6px;"></i> Sign In</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge"><i class="fas fa-gem" style="margin-right: 6px;"></i> 100% Free · No Hidden Fees</div>
+    <h1>From Zero to <span class="highlight">First Trade</span> <br>Without Getting Scammed.</h1>
+    <p>Join 300+ U.S. beginners who learned the real mechanics of crypto trading. Theory is free. The Live Lab is optional.</p>
+    
+    <div class="hero-cta-group">
+      <a href="#" class="btn-secondary"><i class="fas fa-play-circle" style="margin-right: 8px;"></i> Start Free Theory</a>
+      <a href="#" class="btn-success"><i class="fas fa-rocket" style="margin-right: 8px;"></i> Join the Live Lab</a>
+    </div>
+
+    <!-- TRANSPARENCY BANNER — This kills the "scam" feeling -->
+    <div class="transparency-banner">
+      <i class="fas fa-shield-alt"></i>
+      <div>
+        <h4>⚡ Honest Transparency: Why the "Live Lab" uses Coinbase</h4>
+        <p>
+          The course is <strong>100% tuition-free</strong>. If you join the optional Live Lab, you’ll deposit funds 
+          <strong>into your own Coinbase account</strong> (we never touch your money). 
+          Hopeup Trading earns a small referral bonus from Coinbase <strong>at zero extra cost to you</strong>. 
+          If you don’t want to deposit, just take the free theory course — you’ll still learn 80% of the game!
+        </p>
+      </div>
+    </div>
+
+    <div style="margin-top: 12px; font-size: 0.85rem; color: #64748b;">
+      <i class="fas fa-check-circle" style="color: #059669;"></i> U.S. residents only · 18+ · KYC required by law
+    </div>
+  </div>
+</section>
+
+<!-- ========== CURRICULUM ========== -->
+<section id="curriculum">
+  <div class="container">
+    <h2 class="section-title">What’s Inside the Course?</h2>
+    <p class="section-sub">No fluff. Just the exact steps to buy, sell, and secure your first crypto.</p>
+    
+    <div class="grid-3">
+      <div class="card">
+        <i class="fas fa-graduation-cap"></i>
+        <h3>Module 1: The Basics</h3>
+        <p>What is blockchain? Wallets vs. Exchanges. Why Bitcoin matters. No jargon, just plain English.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-user-shield"></i>
+        <h3>Module 2: Security 101</h3>
+        <p>2FA, seed phrases, and how to spot phishing scams. The #1 rule: Keep your keys offline.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Module 3: Your First Trade</h3>
+        <p>Market orders, limit orders, and reading a price chart. We press the buttons together.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-coins"></i>
+        <h3>Module 4: USDC & Stablecoins</h3>
+        <p>Why USDC is your safest on-ramp. How to use it to avoid volatile swings while learning.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-file-invoice"></i>
+        <h3>Module 5: U.S. Taxes</h3>
+        <p>What the IRS expects. How to track your cost basis. Stay clean from day one.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-handshake"></i>
+        <h3>Module 6: The "Live Lab"</h3>
+        <p>Optional walkthrough: deposit $100 via debit card, buy USDC, execute your first BTC trade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HOW IT WORKS (WITH REFERRAL EXPLANATION) ========== -->
+<section id="howitworks" style="background: #f1f5f9; border-radius: 0;">
+  <div class="container">
+    <h2 class="section-title">How to Get Started</h2>
+    <p class="section-sub">Two clear paths. Choose what fits your comfort level.</p>
+
+    <div class="steps">
+      <div class="step-grid">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <h4>📚 Enroll in Theory</h4>
+          <p>Click "Start Free Theory". No payment, no ID, no link needed. Just pure education.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <h4>🤝 Opt into the Lab</h4>
+          <p>Ready to trade? Click "Join Live Lab" — you'll get our exclusive Coinbase partner link.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <h4>✅ KYC in 5 Mins</h4>
+          <p>Upload your U.S. ID & selfie. Use your <strong>debit card</strong> (not ACH) to avoid the 7-day hold.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <h4>🚀 Trade & Learn</h4>
+          <p>Deposit $100 → Buy $100 USDC → Buy $5 BTC. You've made history. We earn our referral.</p>
+        </div>
+      </div>
+
+      <div class="divider-line"></div>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <i class="fas fa-check-circle" style="color: #059669; font-size: 1.6rem;"></i>
+          <div>
+            <strong style="font-size: 1rem;">Your $100 is always yours.</strong>
+            <p style="margin:0; color:#475569; font-size:0.9rem;">It stays in your Coinbase account. We never custody, touch, or manage your funds.</p>
+          </div>
+        </div>
+        <div style="display: flex; gap: 12px;">
+          <span style="background: #e2e8f0; padding: 4px 16px; border-radius: 40px; font-size:0.85rem; font-weight:600;">Coinbase</span>
+          <span style="background: #e2e8f0; padding: 4px 16px; border-radius: 40px; font-size:0.85rem; font-weight:600;">U.S. Legal</span>
+          <span style="background: #e2e8f0; padding: 4px 16px; border-radius: 40px; font-size:0.85rem; font-weight:600;">FDIC Bank</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FAQ (Addressing the tough questions) ========== -->
+<section id="faq">
+  <div class="container">
+    <h2 class="section-title">Got Questions? We've Got Answers.</h2>
+    <p class="section-sub">We believe in radical transparency. Here’s what students ask most.</p>
+
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h4>❓ Is this a paid course?</h4>
+        <p><strong>No.</strong> The entire curriculum is 100% free. The optional Live Lab uses a Coinbase referral link, but you pay nothing for the course itself.</p>
+      </div>
+      <div class="faq-item">
+        <h4>❓ Why do I need to deposit $100?</h4>
+        <p>That's the minimum requirement for Coinbase's U.S. referral program. It also ensures you're trading with "real skin in the game" so the lessons stick. You can withdraw it anytime.</p>
+      </div>
+      <div class="faq-item">
+        <h4>❓ Is Coinbase safe for U.S. residents?</h4>
+        <p>Yes. It's a NASDAQ-listed company (COIN), holds a U.S. BitLicense, and carries FDIC insurance on USD balances. It's the most regulated exchange in America.</p>
+      </div>
+      <div class="faq-item">
+        <h4>❓ Do I have to use your link?</h4>
+        <p>Not at all! You're welcome to take the Theory course and open any exchange you like. We only earn a reward if you use our partner link for the Live Lab.</p>
+      </div>
+      <div class="faq-item">
+        <h4>❓ What if my KYC gets rejected?</h4>
+        <p>It happens. We have a dedicated 3-min video tutorial inside the Lab that shows exactly how to take the selfie and scan your ID to pass on the first try.</p>
+      </div>
+      <div class="faq-item">
+        <h4>❓ Will this affect my taxes?</h4>
+        <p>Yes. Buying crypto isn't a taxable event, but selling or trading is. We dedicate an entire module to U.S. tax tracking so you're prepared for April 15th.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL CTA ========== -->
+<section style="background: #0f172a; color: white; padding: 60px 0; border-radius: 0;">
+  <div class="container" style="text-align: center;">
+    <h2 style="font-size: 2.4rem; font-weight: 700; margin-bottom: 12px;">Ready to Trade with Confidence?</h2>
+    <p style="color: #94a3b8; font-size: 1.15rem; max-width: 540px; margin: 0 auto 32px;">
+      Choose your path. No pressure, no tricks. Just real education and an optional on-ramp.
+    </p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
+      <a href="#" class="btn-secondary" style="background: #1e293b; border-color: #334155; color: white;">📖 Start Theory (Free)</a>
+      <a href="#" class="btn-primary">🚀 Join the Live Lab</a>
+    </div>
+    <p style="margin-top: 24px; font-size: 0.8rem; color: #64748b;">
+      <i class="fas fa-lock" style="margin-right: 6px;"></i> Your data is secure. 100% U.S. compliant. 18+ only.
+    </p>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="logo">Hopeup<span>Trading</span></div>
+    <p style="color: #94a3b8;">Empowering U.S. beginners to navigate crypto without fear, hype, or hidden fees.</p>
+    
+    <div class="disclaimer">
+      <strong>⚠️ Important Disclaimer:</strong> Hopeup Trading provides educational content only. We are not a financial advisor, broker, or registered investment firm. 
+      Cryptocurrency trading involves substantial risk of loss. Always do your own research (DYOR) and consult a licensed professional for tax or investment advice. 
+      Past performance does not guarantee future results. By using our referral link, you acknowledge that Hopeup Trading may receive a commission from Coinbase at no extra cost to you.
+    </div>
+
+    <div style="display: flex; gap: 24px; margin-top: 12px; font-size: 0.9rem;">
+      <a href="#" style="color: #94a3b8; text-decoration: none;">Privacy Policy</a>
+      <a href="#" style="color: #94a3b8; text-decoration: none;">Terms of Service</a>
+      <a href="#" style="color: #94a3b8; text-decoration: none;">Contact</a>
+    </div>
+    <p style="margin-top: 16px; font-size: 0.75rem; color: #475569;">© 2026 Hopeup Trading. Built for the U.S. market.</p>
+  </div>
+</footer>
+
+</body>
+</html>
