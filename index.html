@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HopeupTech Inc. · Crypto Futures Trading Course</title>
+  <title>HopeupTech Inc. · Crypto Trading Course</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
   <style>
     /* ----- GLOBAL RESET & BASE ----- */
@@ -30,7 +30,7 @@
     .navbar {
       background: #ffffff;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-      padding: 14px 0;
+      padding: 10px 0;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -42,11 +42,11 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 10px;
     }
 
     .logo {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
       font-weight: 700;
       letter-spacing: -0.5px;
       display: flex;
@@ -62,7 +62,7 @@
     .logo .inc {
       font-weight: 400;
       color: #64748b;
-      font-size: 0.9rem;
+      font-size: 0.8rem;
       -webkit-text-fill-color: #64748b;
       border-left: 1px solid #cbd5e1;
       padding-left: 10px;
@@ -70,7 +70,7 @@
     .logo .badge-canada {
       background: #dbeafe;
       color: #1d4ed8;
-      font-size: 0.6rem;
+      font-size: 0.55rem;
       font-weight: 700;
       padding: 2px 10px;
       border-radius: 40px;
@@ -82,7 +82,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 20px;
       flex-wrap: wrap;
     }
 
@@ -90,7 +90,7 @@
       text-decoration: none;
       color: #334155;
       font-weight: 500;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       transition: color 0.2s;
     }
     .nav-links a:hover {
@@ -100,15 +100,34 @@
       color: #2563eb;
       font-weight: 600;
     }
+    
+    /* Social Icons in Nav */
+    .nav-social {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-left: 8px;
+      border-left: 1px solid #e2e8f0;
+      padding-left: 16px;
+    }
+    .nav-social a {
+      color: #64748b;
+      font-size: 1.1rem;
+      transition: 0.2s;
+    }
+    .nav-social a:hover {
+      color: #2563eb;
+      transform: scale(1.05);
+    }
 
     .btn-outline-nav {
       background: transparent;
       border: 1.5px solid #2563eb;
       color: #2563eb;
-      padding: 6px 20px;
+      padding: 6px 18px;
       border-radius: 40px;
       font-weight: 600;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       transition: 0.2s;
       cursor: pointer;
       text-decoration: none;
@@ -116,6 +135,24 @@
     .btn-outline-nav:hover {
       background: #2563eb;
       color: white;
+    }
+
+    .btn-nav-enroll {
+      background: #059669;
+      color: white;
+      border: none;
+      padding: 6px 20px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      transition: 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(5, 150, 105, 0.2);
+    }
+    .btn-nav-enroll:hover {
+      background: #047857;
+      transform: translateY(-1px);
     }
 
     /* ----- PAGE CONTAINER (Multipage logic) ----- */
@@ -300,6 +337,41 @@
       font-size: 0.95rem;
     }
 
+    /* ----- PRICING CARD (NEW) ----- */
+    .pricing-card {
+      max-width: 480px;
+      margin: 40px auto 0;
+      background: white;
+      border-radius: 32px;
+      padding: 40px;
+      border: 2px solid #2563eb;
+      box-shadow: 0 20px 40px rgba(37, 99, 235, 0.08);
+      text-align: center;
+    }
+    .pricing-card .price {
+      font-size: 3.8rem;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    .pricing-card .price span {
+      font-size: 1.4rem;
+      font-weight: 500;
+      color: #64748b;
+    }
+    .pricing-card .includes {
+      margin: 20px 0;
+      color: #475569;
+    }
+    .pricing-card .includes i {
+      color: #059669;
+      margin-right: 8px;
+    }
+    .pricing-card .note {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      margin-top: 16px;
+    }
+
     /* ----- TRANSPARENCY BANNER (used in Lab page) ----- */
     .transparency-banner {
       background: #fffbeb;
@@ -342,7 +414,7 @@
     }
     .step-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 24px;
       margin-top: 16px;
     }
@@ -401,10 +473,14 @@
       margin-bottom: 16px;
     }
 
-    /* ----- CONTACT ----- */
+    /* ----- CONTACT (with Socials) ----- */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
     .contact-form {
-      max-width: 600px;
-      margin: 0 auto;
       background: white;
       padding: 40px;
       border-radius: 24px;
@@ -432,6 +508,64 @@
       box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
     }
 
+    .contact-direct {
+      background: white;
+      padding: 40px;
+      border-radius: 24px;
+      border: 1px solid #eef2f6;
+      text-align: center;
+    }
+    .contact-direct h3 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    .contact-direct .social-block {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .contact-direct .social-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #f8fafc;
+      padding: 16px 20px;
+      border-radius: 16px;
+      border: 1px solid #eef2f6;
+      transition: 0.2s;
+      text-decoration: none;
+      color: #0f172a;
+    }
+    .contact-direct .social-item:hover {
+      border-color: #2563eb;
+      background: #f1f5f9;
+      transform: translateX(4px);
+    }
+    .contact-direct .social-item i {
+      font-size: 1.8rem;
+      width: 40px;
+      text-align: center;
+    }
+    .contact-direct .social-item .fa-telegram-plane {
+      color: #0088cc;
+    }
+    .contact-direct .social-item .fa-whatsapp {
+      color: #25d366;
+    }
+    .contact-direct .social-item .fa-envelope {
+      color: #ea4335;
+    }
+    .contact-direct .social-item span {
+      font-weight: 600;
+    }
+    .contact-direct .social-item small {
+      color: #64748b;
+      font-weight: 400;
+      display: block;
+      font-size: 0.8rem;
+    }
+
     /* ----- FOOTER ----- */
     .footer {
       background: #0f172a;
@@ -454,6 +588,20 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+    }
+    .footer .footer-socials {
+      display: flex;
+      gap: 20px;
+      margin: 6px 0;
+    }
+    .footer .footer-socials a {
+      color: #94a3b8;
+      font-size: 1.4rem;
+      transition: 0.2s;
+    }
+    .footer .footer-socials a:hover {
+      color: white;
+      transform: scale(1.1);
     }
     .footer p {
       font-size: 0.85rem;
@@ -482,6 +630,12 @@
       }
       .nav-links {
         justify-content: center;
+        gap: 12px;
+      }
+      .nav-social {
+        border-left: none;
+        padding-left: 0;
+        margin-left: 0;
         gap: 16px;
       }
       .about-grid {
@@ -497,6 +651,15 @@
       }
       .section-title {
         font-size: 1.8rem;
+      }
+      .contact-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .pricing-card {
+        padding: 24px 16px;
+      }
+      .pricing-card .price {
+        font-size: 2.8rem;
       }
       .contact-form {
         padding: 24px 16px;
@@ -519,56 +682,70 @@
         <a href="#course" data-page="course">Course</a>
         <a href="#lab" data-page="lab">Trading Lab</a>
         <a href="#contact" data-page="contact">Contact</a>
+        
+        <!-- Social Quick Links -->
+        <div class="nav-social">
+          <a href="https://t.me/yourusername" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+          <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:support@hopeuptech.com" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        
         <a href="#" class="btn-outline-nav"><i class="fas fa-user-plus" style="margin-right:6px;"></i>Sign In</a>
+        <a href="#course" class="btn-nav-enroll">Enroll $499</a>
       </div>
     </div>
   </nav>
 
-  <!-- ============ PAGE: HOME (Futures Trading Focus) ============ -->
+  <!-- ============ PAGE: HOME (Crypto Trading Focus) ============ -->
   <section id="page-home" class="page active">
     <div class="container">
       <div class="hero">
-        <div class="hero-badge"><i class="fas fa-chart-line" style="margin-right:6px;"></i> Active Trading · Leverage · Long/Short</div>
+        <div class="hero-badge"><i class="fas fa-chart-line" style="margin-right:6px;"></i> Technical Analysis · Risk Management · Live Execution</div>
         <h1>
-          Master Crypto Futures <br /><span class="highlight">Like Forex & Stocks</span>
+          Master Crypto Trading. <br /><span class="highlight">Start with Bitcoin (BTC).</span>
         </h1>
         <p>
-          HopeupTech Inc. teaches you the <strong>mechanics of leveraged trading</strong> — 
-          order books, margin, liquidation, and technical analysis. Just like traditional 
-          markets, but powered by blockchain. Theory is free. The optional Trading Lab 
-          gets you live execution practice.
+          HopeupTech Inc. teaches you the <strong>real mechanics of trading</strong> — 
+          order books, leverage, margin, technical indicators, and disciplined risk management. 
+          Learn to trade Bitcoin and major crypto assets like a professional.
         </p>
-        <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:16px;">
-          <a href="#course" class="btn-secondary"><i class="fas fa-play-circle" style="margin-right:8px;"></i>View Trading Curriculum</a>
-          <a href="#lab" class="btn-warning"><i class="fas fa-balance-scale" style="margin-right:8px;"></i>Enter the Trading Lab</a>
+        
+        <!-- PRICING SECTION INTEGRATED INTO HERO -->
+        <div class="pricing-card">
+          <div class="price">$499 <span>USD</span></div>
+          <p style="color:#2563eb; font-weight:600; margin:4px 0;">One-time tuition · Lifetime access</p>
+          <div class="includes">
+            <p><i class="fas fa-check-circle"></i> 6 comprehensive trading modules</p>
+            <p><i class="fas fa-check-circle"></i> Live Trading Lab (with Coinbase on-ramp)</p>
+            <p><i class="fas fa-check-circle"></i> Private community &amp; weekly market reviews</p>
+          </div>
+          <a href="#course" class="btn-success" style="width:100%; padding:14px;">Enroll Now — Start Trading</a>
+          <p class="note"><i class="fas fa-lock"></i> Secure checkout · 30-day money-back guarantee</p>
         </div>
-        <p style="margin-top:30px; font-size:0.85rem; color:#94a3b8;">
-          <i class="fas fa-check-circle" style="color:#059669;"></i> 100% free theory · Optional hands-on with micro-lots
-        </p>
-      </div>
 
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:20px; margin-top:10px;">
-        <div style="background:white; padding:24px; border-radius:16px; border:1px solid #eef2f6; text-align:center;">
-          <i class="fas fa-arrow-up" style="font-size:2rem; color:#2563eb;"></i>
-          <i class="fas fa-arrow-down" style="font-size:2rem; color:#2563eb; margin-left:4px;"></i>
-          <h4>Go Long & Short</h4>
-          <p style="font-size:0.9rem; color:#64748b;">Profit in both bull and bear markets with perpetual futures.</p>
-        </div>
-        <div style="background:white; padding:24px; border-radius:16px; border:1px solid #eef2f6; text-align:center;">
-          <i class="fas fa-sliders-h" style="font-size:2rem; color:#2563eb;"></i>
-          <h4>Leverage & Margin</h4>
-          <p style="font-size:0.9rem; color:#64748b;">Understand cross vs. isolated margin and how liquidation works.</p>
-        </div>
-        <div style="background:white; padding:24px; border-radius:16px; border:1px solid #eef2f6; text-align:center;">
-          <i class="fas fa-shield-virus" style="font-size:2rem; color:#2563eb;"></i>
-          <h4>Risk First</h4>
-          <p style="font-size:0.9rem; color:#64748b;">Position sizing, stop-losses, and managing drawdowns like a pro.</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(180px,1fr)); gap:20px; margin-top:40px;">
+          <div style="background:white; padding:20px; border-radius:16px; border:1px solid #eef2f6; text-align:center;">
+            <i class="fas fa-arrow-up" style="font-size:1.8rem; color:#2563eb;"></i>
+            <i class="fas fa-arrow-down" style="font-size:1.8rem; color:#2563eb; margin-left:4px;"></i>
+            <h4>Long & Short</h4>
+            <p style="font-size:0.9rem; color:#64748b;">Profit in any market direction.</p>
+          </div>
+          <div style="background:white; padding:20px; border-radius:16px; border:1px solid #eef2f6; text-align:center;">
+            <i class="fas fa-sliders-h" style="font-size:1.8rem; color:#2563eb;"></i>
+            <h4>Leverage & Margin</h4>
+            <p style="font-size:0.9rem; color:#64748b;">Understand collateral and liquidation.</p>
+          </div>
+          <div style="background:white; padding:20px; border-radius:16px; border:1px solid #eef2f6; text-align:center;">
+            <i class="fas fa-shield-virus" style="font-size:1.8rem; color:#2563eb;"></i>
+            <h4>Risk First</h4>
+            <p style="font-size:0.9rem; color:#64748b;">Position sizing, stop-losses, and drawdowns.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ PAGE: ABOUT (Tech & Trading Focus) ============ -->
+  <!-- ============ PAGE: ABOUT ============ -->
   <section id="page-about" class="page">
     <div class="container">
       <div class="about-grid">
@@ -577,15 +754,15 @@
           <h2>Built by Traders, <br />For Traders.</h2>
           <p>
             Founded in Toronto, <strong>HopeupTech Inc.</strong> is a software and education company
-            focused on <strong>active trading strategies</strong>. We believe crypto futures are 
-            the most transparent and accessible instrument for learning leveraged trading — 
-            just like the S&P 500 or Forex pairs, but with 24/7 markets and higher volatility.
+            focused on <strong>active crypto trading strategies</strong>. We believe that 
+            Bitcoin and digital assets offer the most transparent and accessible markets 
+            for learning leveraged trading — 24/7 global liquidity with clear order-book mechanics.
           </p>
           <p>
             Our program strips away the hype. We teach you the <strong>mechanics</strong>: 
             order book dynamics, funding rates, margin calls, and technical indicators 
             (RSI, MACD, VWAP). We don't sell signals; we teach you how to read the market 
-            and manage your risk.
+            and manage your own risk.
           </p>
           <div style="display:flex; gap:20px; flex-wrap:wrap; margin-top:16px;">
             <span><i class="fas fa-map-pin" style="color:#2563eb;"></i> Toronto, ON</span>
@@ -599,27 +776,27 @@
       </div>
 
       <div style="margin-top:60px; background:#0f172a; color:white; padding:40px; border-radius:24px; text-align:center;">
-        <h3 style="font-size:1.6rem; margin-bottom:8px;">Futures = Forex/Stocks, but Crypto-Native</h3>
+        <h3 style="font-size:1.6rem; margin-bottom:8px;">Why Trade Crypto?</h3>
         <p style="color:#94a3b8; max-width:700px; margin:0 auto;">
-          The skills are identical: reading order flow, setting take-profits, managing leverage. 
-          Crypto just gives you <strong>lower barriers to entry</strong> and a 24/7 global market 
-          to practice your edge.
+          The skills are universal: reading order flow, setting take-profits, managing leverage. 
+          Crypto gives you <strong>lower barriers to entry</strong> and a 24/7 global market 
+          to practice your edge — starting with the king, Bitcoin (BTC).
         </p>
       </div>
     </div>
   </section>
 
-  <!-- ============ PAGE: COURSE (Futures Curriculum) ============ -->
+  <!-- ============ PAGE: COURSE (Curriculum) ============ -->
   <section id="page-course" class="page">
     <div class="container">
-      <h2 class="section-title">The Futures Trading Curriculum</h2>
-      <p class="section-sub">6 technical modules. Zero fluff. Focused on execution and risk.</p>
+      <h2 class="section-title">The Crypto Trading Curriculum</h2>
+      <p class="section-sub">6 technical modules. Zero fluff. Focused on execution and risk management.</p>
 
       <div class="grid-3">
         <div class="card">
           <i class="fas fa-infinity"></i>
-          <h3>Module 1: Perpetual Futures</h3>
-          <p>How perpetual swaps work. Funding rates, mark prices, and why they never expire.</p>
+          <h3>Module 1: Market Mechanics</h3>
+          <p>How crypto order books work. Bid/ask spread, market depth, and price discovery.</p>
         </div>
         <div class="card">
           <i class="fas fa-weight-hanging"></i>
@@ -628,7 +805,7 @@
         </div>
         <div class="card">
           <i class="fas fa-exchange-alt"></i>
-          <h3>Module 3: Order Book Mechanics</h3>
+          <h3>Module 3: Order Types</h3>
           <p>Limit, Market, Stop-Loss, Take-Profit, and OCO (One-Cancels-Other) orders.</p>
         </div>
         <div class="card">
@@ -644,38 +821,40 @@
         <div class="card">
           <i class="fas fa-laptop"></i>
           <h3>Module 6: The Trading Lab</h3>
-          <p>Live execution walkthrough: on-ramp USDT, place a micro-lot long/short, manage a trade.</p>
+          <p>Live execution walkthrough: on-ramp USDT, place a long/short trade, manage a position.</p>
         </div>
       </div>
 
-      <div style="text-align:center; margin-top:40px;">
-        <a href="#lab" class="btn-primary"><i class="fas fa-flask" style="margin-right:8px;"></i> Enter the Trading Lab</a>
-        <p style="margin-top:12px; font-size:0.85rem; color:#64748b;">The Lab is optional and uses a partner on-ramp for USDT collateral.</p>
+      <!-- Pricing reiteration -->
+      <div style="text-align:center; margin-top:40px; background:#f1f5f9; padding:32px; border-radius:24px;">
+        <h3 style="font-size:1.6rem;">Full Course Access: <span style="color:#059669;">$499 USD</span></h3>
+        <p style="color:#475569; margin-bottom:16px;">Includes all modules, the Trading Lab, and private community access.</p>
+        <a href="#" class="btn-success"><i class="fas fa-shopping-cart" style="margin-right:8px;"></i> Enroll Now</a>
       </div>
     </div>
   </section>
 
-  <!-- ============ PAGE: LAB (The Trading Lab - Futures Focus) ============ -->
+  <!-- ============ PAGE: LAB (The Trading Lab - Crypto Focus) ============ -->
   <section id="page-lab" class="page">
     <div class="container">
       <h2 class="section-title">⚡ The Trading Lab</h2>
       <p class="section-sub">
-        Move from theory to live execution. This is an <strong>optional</strong> sandbox where 
-        you deposit collateral (USDT) and execute a real leveraged trade using micro-lots.
+        Move from theory to live execution. This is a <strong>bonus module</strong> included with your enrollment, 
+        where you deposit collateral (USDT) and execute a real trade using micro-lots.
       </p>
 
-      <!-- Transparency Banner (Crucial for trust) -->
+      <!-- Transparency Banner -->
       <div class="transparency-banner" style="max-width:100%;">
         <i class="fas fa-shield-alt"></i>
         <div>
-          <h4>🔬 Lab Transparency: How we keep this free</h4>
+          <h4>🔬 Lab Transparency: How we keep the course sustainable</h4>
           <p>
-            HopeupTech Inc. funds this free education via partner referrals. In the Lab, 
-            we recommend using <strong>Coinbase</strong> as your regulated U.S. on-ramp to 
+            HopeupTech Inc. charges a <strong>$499 tuition</strong> for the full curriculum. 
+            In the Lab, we recommend using <strong>Coinbase</strong> as your regulated U.S. on-ramp to 
             buy USDT (collateral). You deposit funds <strong>into your own wallet</strong> 
             — we never touch your capital. If you use our partner link, Coinbase pays us a 
-            small tech-education bonus <strong>at zero extra cost to you</strong>. 
-            No deposit? Skip the Lab and master the theory.
+            small tech-education bonus <strong>at zero extra cost to you</strong> to help us 
+            improve the platform.
           </p>
         </div>
       </div>
@@ -684,7 +863,7 @@
         <div class="step-grid">
           <div class="step-item">
             <div class="step-num">1</div>
-            <h4>📘 Finish Theory</h4>
+            <h4>📘 Enroll & Study</h4>
             <p>Complete Modules 1–5 so you understand leverage, margin, and risk.</p>
           </div>
           <div class="step-item">
@@ -694,13 +873,13 @@
           </div>
           <div class="step-item">
             <div class="step-num">3</div>
-            <h4>🔗 Fund a Futures Platform</h4>
-            <p>Transfer USDT to a regulated U.S. futures exchange (we guide you through it).</p>
+            <h4>🔗 Fund a Trading Platform</h4>
+            <p>Transfer USDT to a regulated U.S. exchange (we guide you through it).</p>
           </div>
           <div class="step-item">
             <div class="step-num">4</div>
             <h4>📊 Execute Your First Trade</h4>
-            <p>Place a micro-lot long/short with 2x–5x leverage. Set a stop-loss. Watch the mechanics.</p>
+            <p>Place a micro-lot long or short on BTC. Set a stop-loss. Watch the mechanics live.</p>
           </div>
         </div>
 
@@ -711,7 +890,7 @@
             <i class="fas fa-check-circle" style="color:#059669; font-size:1.6rem;"></i>
             <div>
               <strong style="font-size:1rem;">Your USDT is always yours.</strong>
-              <p style="margin:0; color:#475569; font-size:0.9rem;">You control the private keys. Withdraw anytime.</p>
+              <p style="margin:0; color:#475569; font-size:0.9rem;">You control the keys. Withdraw anytime.</p>
             </div>
           </div>
           <div style="display:flex; gap:12px; flex-wrap:wrap;">
@@ -726,44 +905,68 @@
             <i class="fas fa-rocket" style="margin-right:10px;"></i> Start the Trading Lab
           </a>
           <p style="margin-top:12px; font-size:0.8rem; color:#94a3b8;">
-            By clicking, you agree to the partner exchange's terms. 18+ U.S. residents only.
-            <br><strong>Disclaimer:</strong> Futures trading involves significant risk of loss. Only trade with risk capital.
+            Lab access is included with the $499 course enrollment.
+            <br><strong>Disclaimer:</strong> Trading involves significant risk of loss. Only trade with risk capital.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ PAGE: CONTACT ============ -->
+  <!-- ============ PAGE: CONTACT (with Telegram, WhatsApp, Email) ============ -->
   <section id="page-contact" class="page">
     <div class="container">
       <h2 class="section-title">Get in Touch</h2>
       <p class="section-sub">
-        Have questions about leverage, funding rates, or our Canadian tech initiatives?
-        Reach out — we reply within 24 hours.
+        Have questions about the curriculum, the Lab, or enrollment? Reach out to us directly.
       </p>
 
-      <div class="contact-form">
-        <form action="#" method="post">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" placeholder="e.g. Alex Johnson" />
+      <div class="contact-wrapper">
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <form action="#" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" placeholder="e.g. Alex Johnson" />
 
-          <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="alex@example.com" />
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="alex@example.com" />
 
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" placeholder="Question about the Trading Lab" />
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" placeholder="Question about the Trading Lab" />
 
-          <label for="message">Message</label>
-          <textarea id="message" rows="5" placeholder="Tell us what you need..."></textarea>
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Tell us what you need..."></textarea>
 
-          <button type="submit" class="btn-primary" style="width:100%; margin-top:20px;">
-            <i class="fas fa-paper-plane" style="margin-right:8px;"></i> Send Message
-          </button>
-        </form>
-        <p style="margin-top:16px; font-size:0.8rem; color:#94a3b8; text-align:center;">
-          <i class="fas fa-maple-leaf" style="color:#2563eb;"></i> HopeupTech Inc. · Toronto, Canada
-        </p>
+            <button type="submit" class="btn-primary" style="width:100%; margin-top:20px;">
+              <i class="fas fa-paper-plane" style="margin-right:8px;"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Direct Contact (Social & Email) -->
+        <div class="contact-direct">
+          <h3><i class="fas fa-headset" style="color:#2563eb;"></i> Reach Us Instantly</h3>
+          <p style="color:#64748b;">We reply within 24 hours, usually faster on Telegram &amp; WhatsApp.</p>
+          
+          <div class="social-block">
+            <a href="https://t.me/yourusername" target="_blank" class="social-item">
+              <i class="fab fa-telegram-plane"></i>
+              <div><span>Telegram</span> <small>@HopeupTechSupport</small></div>
+            </a>
+            <a href="https://wa.me/1234567890" target="_blank" class="social-item">
+              <i class="fab fa-whatsapp"></i>
+              <div><span>WhatsApp</span> <small>+1 (234) 567-890</small></div>
+            </a>
+            <a href="mailto:support@hopeuptech.com" class="social-item">
+              <i class="fas fa-envelope"></i>
+              <div><span>Email</span> <small>support@hopeuptech.com</small></div>
+            </a>
+          </div>
+          
+          <p style="margin-top:24px; font-size:0.8rem; color:#94a3b8;">
+            <i class="fas fa-maple-leaf" style="color:#2563eb;"></i> HopeupTech Inc. · Toronto, Canada
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -772,10 +975,17 @@
   <footer class="footer">
     <div class="container">
       <div class="logo-footer">HopeupTech <span style="font-weight:400; -webkit-text-fill-color:#94a3b8; color:#94a3b8;">Inc.</span></div>
-      <p>Teaching U.S. traders the mechanics of crypto futures — leverage, order books, and risk management.</p>
+      
+      <div class="footer-socials">
+        <a href="https://t.me/yourusername" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+        <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="mailto:support@hopeuptech.com" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+
+      <p>Teaching U.S. traders the mechanics of crypto — leverage, order books, and risk management.</p>
 
       <div class="disclaimer">
-        <strong>⚠️ High-Risk Disclaimer:</strong> Crypto futures trading is highly leveraged and carries a substantial risk of loss.
+        <strong>⚠️ High-Risk Disclaimer:</strong> Crypto trading is highly leveraged and carries a substantial risk of loss.
         It is not suitable for all investors. HopeupTech Inc. provides educational content only. We are not a financial advisor,
         broker, or registered investment firm. Always DYOR (Do Your Own Research) and consult a licensed professional.
         By using our partner exchange link, you acknowledge that HopeupTech may receive a referral commission at no extra cost to you.
@@ -793,7 +1003,6 @@
   <!-- ============ MULTIPAGE ROUTER (JAVASCRIPT) ============ -->
   <script>
     (function() {
-      // Get all page sections and nav links
       const pages = {
         home: document.getElementById('page-home'),
         about: document.getElementById('page-about'),
@@ -804,58 +1013,40 @@
 
       const navLinks = document.querySelectorAll('.nav-links a[data-page]');
 
-      // Function to switch page
       function showPage(pageId) {
-        // Hide all pages
         Object.keys(pages).forEach(key => {
           pages[key].classList.remove('active');
         });
-
-        // Show target page
         if (pages[pageId]) {
           pages[pageId].classList.add('active');
         }
-
-        // Update nav active class
         navLinks.forEach(link => {
           link.classList.remove('active');
           if (link.getAttribute('data-page') === pageId) {
             link.classList.add('active');
           }
         });
-
-        // Update URL hash without triggering scroll
         if (window.location.hash !== '#' + pageId) {
           history.pushState(null, null, '#' + pageId);
         }
       }
 
-      // Handle hash changes (back/forward buttons)
       window.addEventListener('hashchange', function() {
         const hash = window.location.hash.replace('#', '') || 'home';
-        if (pages[hash]) {
-          showPage(hash);
-        } else {
-          showPage('home');
-        }
+        if (pages[hash]) showPage(hash);
+        else showPage('home');
       });
 
-      // Handle nav link clicks
       navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
           e.preventDefault();
           const pageId = this.getAttribute('data-page');
-          if (pageId && pages[pageId]) {
-            showPage(pageId);
-          }
+          if (pageId && pages[pageId]) showPage(pageId);
         });
       });
 
-      // Handle internal anchor links (e.g., from buttons to #lab)
       document.querySelectorAll('a[href^="#"]').forEach(link => {
-        // Skip if it's a nav link (already handled)
         if (link.closest('.nav-links')) return;
-        
         link.addEventListener('click', function(e) {
           const href = this.getAttribute('href');
           if (href === '#') return;
@@ -863,19 +1054,14 @@
           if (pages[pageId]) {
             e.preventDefault();
             showPage(pageId);
-            // Scroll to top smoothly
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }
         });
       });
 
-      // Initial load: check hash or default to home
       const initialHash = window.location.hash.replace('#', '') || 'home';
-      if (pages[initialHash]) {
-        showPage(initialHash);
-      } else {
-        showPage('home');
-      }
+      if (pages[initialHash]) showPage(initialHash);
+      else showPage('home');
     })();
   </script>
 
