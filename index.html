@@ -1,608 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hopeup Trading · Free Crypto Course for Beginners</title>
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hopeup Trading – Course Ladder</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* --- Reset & Base --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      background: #f8fafc;
-      color: #0f172a;
-      line-height: 1.6;
-    }
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #f8faff;
+            color: #1a1a2e;
+            line-height: 1.6;
+        }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-    /* ----- NAVIGATION ----- */
-    .navbar {
-      background: #ffffff;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
-      padding: 18px 0;
-      position: sticky;
-      top: 0;
-      z-index: 50;
-    }
+        /* --- Header / Navigation --- */
+        .header {
+            background: #ffffff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 20px 0;
+            border-bottom: 2px solid #e6b91e;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
 
-    .navbar .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
 
-    .logo {
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      background: linear-gradient(135deg, #0ea5e9, #2563eb);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .logo span {
-      font-weight: 300;
-      color: #334155;
-      -webkit-text-fill-color: #334155;
-    }
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: #0a1a3a;
+        }
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
+        .logo span {
+            color: #e6b91e;
+        }
 
-    .nav-links a {
-      text-decoration: none;
-      color: #334155;
-      font-weight: 500;
-      font-size: 0.95rem;
-      transition: color 0.2s;
-    }
-    .nav-links a:hover { color: #2563eb; }
+        .tagline {
+            font-size: 14px;
+            color: #4a4a6a;
+            font-weight: 400;
+            background: #f0f4ff;
+            padding: 8px 18px;
+            border-radius: 30px;
+            border: 1px solid #dce3f0;
+        }
 
-    .btn-outline-nav {
-      background: transparent;
-      border: 1.5px solid #2563eb;
-      color: #2563eb;
-      padding: 8px 20px;
-      border-radius: 40px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      transition: 0.2s;
-      cursor: pointer;
-      text-decoration: none;
-    }
-    .btn-outline-nav:hover {
-      background: #2563eb;
-      color: white;
-    }
+        /* --- Hero Section --- */
+        .hero {
+            text-align: center;
+            padding: 60px 0 40px 0;
+        }
 
-    /* ----- BUTTONS ----- */
-    .btn-primary {
-      background: #2563eb;
-      color: white;
-      border: none;
-      padding: 14px 36px;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 1.05rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      box-shadow: 0 8px 18px rgba(37, 99, 235, 0.25);
-      text-decoration: none;
-      display: inline-block;
-    }
-    .btn-primary:hover {
-      background: #1d4ed8;
-      transform: translateY(-2px);
-      box-shadow: 0 12px 24px rgba(37, 99, 235, 0.35);
-    }
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #0a1a3a;
+            margin-bottom: 16px;
+        }
 
-    .btn-secondary {
-      background: #f1f5f9;
-      color: #0f172a;
-      border: 1px solid #e2e8f0;
-      padding: 14px 36px;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 1.05rem;
-      cursor: pointer;
-      transition: 0.2s;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .btn-secondary:hover {
-      background: #e2e8f0;
-      border-color: #94a3b8;
-    }
+        .hero h1 i {
+            color: #e6b91e;
+        }
 
-    .btn-success {
-      background: #059669;
-      color: white;
-      border: none;
-      padding: 14px 36px;
-      border-radius: 60px;
-      font-weight: 600;
-      font-size: 1.05rem;
-      cursor: pointer;
-      transition: 0.2s;
-      text-decoration: none;
-      display: inline-block;
-      box-shadow: 0 8px 18px rgba(5, 150, 105, 0.25);
-    }
-    .btn-success:hover {
-      background: #047857;
-      transform: translateY(-2px);
-    }
+        .hero p {
+            font-size: 20px;
+            color: #4a4a6a;
+            max-width: 720px;
+            margin: 0 auto 30px auto;
+        }
 
-    /* ----- HERO ----- */
-    .hero {
-      padding: 60px 0 40px;
-      text-align: center;
-    }
+        .hero .badge {
+            display: inline-block;
+            background: #e6b91e;
+            color: #0a1a3a;
+            font-weight: 700;
+            padding: 6px 24px;
+            border-radius: 40px;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
 
-    .hero-badge {
-      background: #dbeafe;
-      color: #1d4ed8;
-      padding: 6px 18px;
-      border-radius: 40px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      display: inline-block;
-      margin-bottom: 20px;
-      letter-spacing: 0.3px;
-    }
+        /* --- Pricing Grid (The Ladder) --- */
+        .pricing-section {
+            padding: 40px 0 70px 0;
+        }
 
-    .hero h1 {
-      font-size: 3.2rem;
-      font-weight: 800;
-      line-height: 1.15;
-      margin-bottom: 20px;
-      letter-spacing: -1px;
-    }
-    .hero h1 .highlight {
-      background: linear-gradient(135deg, #2563eb, #06b6d4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #0a1a3a;
+        }
 
-    .hero p {
-      font-size: 1.25rem;
-      color: #475569;
-      max-width: 680px;
-      margin: 0 auto 36px;
-    }
+        .section-subtitle {
+            text-align: center;
+            color: #5a5a7a;
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
 
-    .hero-cta-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-    }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            align-items: stretch;
+        }
 
-    /* ----- TRANSPARENCY BANNER (Critical) ----- */
-    .transparency-banner {
-      background: #fffbeb;
-      border: 1px solid #fde68a;
-      border-radius: 16px;
-      padding: 20px 28px;
-      margin: 32px auto 20px;
-      max-width: 820px;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      text-align: left;
-    }
-    .transparency-banner i {
-      color: #d97706;
-      font-size: 1.6rem;
-      margin-top: 4px;
-    }
-    .transparency-banner h4 {
-      color: #92400e;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-    .transparency-banner p {
-      color: #78350f;
-      font-size: 0.95rem;
-      margin: 0;
-    }
-    .transparency-banner strong {
-      color: #b45309;
-    }
+        /* --- Pricing Card --- */
+        .pricing-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 35px 30px 40px;
+            box-shadow: 0 10px 40px rgba(10, 26, 58, 0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            border: 1px solid #edf2fa;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
 
-    /* ----- SECTIONS ----- */
-    section {
-      padding: 60px 0;
-    }
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(10, 26, 58, 0.12);
+        }
 
-    .section-title {
-      font-size: 2.2rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 12px;
-      letter-spacing: -0.5px;
-    }
-    .section-sub {
-      text-align: center;
-      color: #64748b;
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto 48px;
-    }
+        /* Featured / Most Popular */
+        .pricing-card.featured {
+            border: 2px solid #e6b91e;
+            background: #ffffff;
+            box-shadow: 0 15px 50px rgba(230, 185, 30, 0.15);
+        }
 
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      background: white;
-      padding: 32px 24px;
-      border-radius: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-      border: 1px solid #f1f5f9;
-      transition: 0.25s ease;
-      text-align: center;
-    }
-    .card:hover {
-      border-color: #b9d0f8;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.05);
-      transform: translateY(-4px);
-    }
-    .card i {
-      font-size: 2.4rem;
-      color: #2563eb;
-      margin-bottom: 16px;
-    }
-    .card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 8px;
-    }
-    .card p {
-      color: #64748b;
-      font-size: 0.95rem;
-    }
+        .pricing-card.featured .popular-badge {
+            background: #e6b91e;
+            color: #0a1a3a;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 4px 16px;
+            border-radius: 30px;
+            display: inline-block;
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
 
-    /* ----- HOW IT WORKS (STEPS) ----- */
-    .steps {
-      background: #ffffff;
-      border-radius: 32px;
-      padding: 48px 40px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.02);
-      border: 1px solid #eef2f6;
-    }
+        .card-header {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eef2f8;
+            padding-bottom: 20px;
+        }
 
-    .step-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 24px;
-      margin-top: 16px;
-    }
-    .step-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .step-num {
-      background: #dbeafe;
-      color: #1d4ed8;
-      width: 48px;
-      height: 48px;
-      border-radius: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 1.3rem;
-      margin-bottom: 16px;
-    }
-    .step-item h4 {
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-    .step-item p {
-      color: #64748b;
-      font-size: 0.9rem;
-    }
+        .card-header .level {
+            font-size: 14px;
+            font-weight: 600;
+            color: #e6b91e;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-    .divider-line {
-      width: 100%;
-      height: 1px;
-      background: #e2e8f0;
-      margin: 24px 0;
-    }
+        .card-header h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0a1a3a;
+            margin: 8px 0 4px;
+        }
 
-    /* ----- FAQ ----- */
-    .faq-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px 40px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .faq-item h4 {
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 4px;
-    }
-    .faq-item p {
-      color: #475569;
-      font-size: 0.95rem;
-    }
+        .card-header .price {
+            font-size: 42px;
+            font-weight: 800;
+            color: #0a1a3a;
+        }
 
-    /* ----- FOOTER ----- */
-    .footer {
-      background: #0f172a;
-      color: #cbd5e1;
-      padding: 40px 0 24px;
-      margin-top: 20px;
-      border-top: 1px solid #1e293b;
-    }
-    .footer .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 12px;
-      text-align: center;
-    }
-    .footer .logo {
-      background: linear-gradient(135deg, #7dd3fc, #60a5fa);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .footer p {
-      font-size: 0.85rem;
-      max-width: 600px;
-    }
-    .footer .disclaimer {
-      background: #1e293b;
-      padding: 12px 20px;
-      border-radius: 12px;
-      font-size: 0.8rem;
-      color: #94a3b8;
-      width: 100%;
-    }
+        .card-header .price small {
+            font-size: 18px;
+            font-weight: 400;
+            color: #6a6a8a;
+        }
 
-    /* ----- RESPONSIVE ----- */
-    @media (max-width: 768px) {
-      .hero h1 { font-size: 2.4rem; }
-      .hero p { font-size: 1.05rem; }
-      .navbar .container { flex-direction: column; gap: 12px; }
-      .nav-links { flex-wrap: wrap; justify-content: center; gap: 16px; }
-      .faq-grid { grid-template-columns: 1fr; }
-      .transparency-banner { flex-direction: column; align-items: center; text-align: center; }
-      .steps { padding: 28px 16px; }
-    }
-  </style>
+        .card-body {
+            flex: 1;
+            margin-bottom: 30px;
+        }
+
+        .card-body ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card-body ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f4f7fd;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: #2a2a4a;
+            font-size: 15px;
+        }
+
+        .card-body ul li:last-child {
+            border-bottom: 0;
+        }
+
+        .card-body ul li i {
+            color: #e6b91e;
+            font-size: 16px;
+            min-width: 20px;
+            margin-top: 2px;
+        }
+
+        .card-footer {
+            margin-top: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            background: #0a1a3a;
+            color: #ffffff;
+            font-weight: 700;
+            padding: 16px 20px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.2s ease, transform 0.1s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #1a2a5a;
+            transform: scale(1.02);
+        }
+
+        .btn.primary {
+            background: #e6b91e;
+            color: #0a1a3a;
+        }
+
+        .btn.primary:hover {
+            background: #d4a80e;
+        }
+
+        .btn i {
+            margin-right: 10px;
+        }
+
+        /* --- CTA / Bottom Section --- */
+        .cta-section {
+            background: #0a1a3a;
+            padding: 60px 20px;
+            border-radius: 40px;
+            margin: 20px 0 60px 0;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .cta-section h2 {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .cta-section h2 i {
+            color: #e6b91e;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: #b0c0e0;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .cta-section .btn {
+            max-width: 320px;
+            margin: 0 auto;
+            background: #e6b91e;
+            color: #0a1a3a;
+        }
+
+        .cta-section .btn:hover {
+            background: #f5cc2e;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #e2e8f0;
+            color: #6a6a8a;
+            font-size: 14px;
+        }
+
+        .footer span {
+            color: #e6b91e;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+                max-width: 420px;
+                margin: 0 auto;
+            }
+
+            .card-header .price {
+                font-size: 34px;
+            }
+
+            .cta-section h2 {
+                font-size: 26px;
+            }
+
+            .header .container {
+                flex-direction: column;
+                gap: 8px;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 26px;
+            }
+
+            .pricing-card {
+                padding: 25px 18px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<!-- ========== NAV ========== -->
-<nav class="navbar">
-  <div class="container">
-    <div class="logo">Hopeup<span>Trading</span></div>
-    <div class="nav-links">
-      <a href="#curriculum">Curriculum</a>
-      <a href="#howitworks">How It Works</a>
-      <a href="#faq">FAQ</a>
-      <a href="#" class="btn-outline-nav"><i class="fas fa-user-plus" style="margin-right: 6px;"></i> Sign In</a>
-    </div>
-  </div>
-</nav>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">HOPEUP <span>TRADING</span></div>
+            <div class="tagline"><i class="fas fa-graduation-cap" style="margin-right: 8px;"></i> From Beginner to Pro</div>
+        </div>
+    </header>
 
-<!-- ========== HERO ========== -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-badge"><i class="fas fa-gem" style="margin-right: 6px;"></i> 100% Free · No Hidden Fees</div>
-    <h1>From Zero to <span class="highlight">First Trade</span> <br>Without Getting Scammed.</h1>
-    <p>Join 300+ U.S. beginners who learned the real mechanics of crypto trading. Theory is free. The Live Lab is optional.</p>
-    
-    <div class="hero-cta-group">
-      <a href="#" class="btn-secondary"><i class="fas fa-play-circle" style="margin-right: 8px;"></i> Start Free Theory</a>
-      <a href="#" class="btn-success"><i class="fas fa-rocket" style="margin-right: 8px;"></i> Join the Live Lab</a>
+    <!-- ===== HERO ===== -->
+    <section class="hero container">
+        <span class="badge"><i class="fas fa-rocket"></i> 2026 Cohort</span>
+        <h1>Your Trading <i>Ladder</i> to Success</h1>
+        <p>Choose the path that fits your goals. Start free or jump straight into advanced mastery — all backed by real market expertise.</p>
+    </section>
+
+    <!-- ===== PRICING LADDER ===== -->
+    <section class="pricing-section container">
+        <h2 class="section-title">The <span style="color:#e6b91e;">Hopeup</span> Path</h2>
+        <p class="section-subtitle">24-hour live training, community support, and lifetime access to materials.</p>
+
+        <div class="pricing-grid">
+
+            <!-- CARD 1: BEGINNER -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <div class="level"><i class="fas fa-seedling"></i> Level 1</div>
+                    <h3>Beginner</h3>
+                    <div class="price">$499</div>
+                    <div style="color:#6a6a8a; font-size:14px;">4 Weeks · 24 Hours Live</div>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Core fundamentals &amp; terminology</li>
+                        <li><i class="fas fa-check-circle"></i> Chart reading &amp; technical indicators</li>
+                        <li><i class="fas fa-check-circle"></i> Risk management basics</li>
+                        <li><i class="fas fa-check-circle"></i> Live Q&amp;A with the mentor</li>
+                        <li><i class="fas fa-check-circle"></i> Private community access</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- CARD 2: ADVANCED (FEATURED) -->
+            <div class="pricing-card featured">
+                <span class="popular-badge"><i class="fas fa-star"></i> Most Popular</span>
+                <div class="card-header">
+                    <div class="level"><i class="fas fa-chart-line"></i> Level 2</div>
+                    <h3>Advanced</h3>
+                    <div class="price">$799</div>
+                    <div style="color:#6a6a8a; font-size:14px;">4 Weeks · 24 Hours Live</div>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <strong>Everything in Beginner</strong>, plus:</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced strategies (options &amp; margin)</li>
+                        <li><i class="fas fa-check-circle"></i> Algorithmic setup &amp; automation</li>
+                        <li><i class="fas fa-check-circle"></i> Live trade executions (walkthroughs)</li>
+                        <li><i class="fas fa-check-circle"></i> Weekly 1-on-1 feedback session</li>
+                        <li><i class="fas fa-check-circle"></i> Exclusive advanced indicators</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn primary">Enroll Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <!-- CARD 3: MENTORSHIP -->
+            <div class="pricing-card">
+                <div class="card-header">
+                    <div class="level"><i class="fas fa-crown"></i> Level 3</div>
+                    <h3>Mentorship</h3>
+                    <div class="price">$1,500</div>
+                    <div style="color:#6a6a8a; font-size:14px;">8 Weeks · Intensive</div>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <strong>Everything in Advanced</strong>, plus:</li>
+                        <li><i class="fas fa-check-circle"></i> 1-on-1 personalized strategy design</li>
+                        <li><i class="fas fa-check-circle"></i> Full portfolio risk audit</li>
+                        <li><i class="fas fa-check-circle"></i> Direct mentor access (Telegram/Signal)</li>
+                        <li><i class="fas fa-check-circle"></i> Custom trading plan built for you</li>
+                        <li><i class="fas fa-check-circle"></i> Lifetime updates &amp; alumni network</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn">Apply Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== CTA / DISCLAIMER ===== -->
+    <div class="container">
+        <div class="cta-section">
+            <h2><i class="fas fa-flag-checkered"></i> Not sure which tier?</h2>
+            <p>Book a free 15-minute discovery call with our team. We'll assess your current level and recommend the perfect starting point.</p>
+            <a href="#" class="btn"><i class="fas fa-calendar-check"></i> Book a Free Call</a>
+        </div>
     </div>
 
-    <!-- TRANSPARENCY BANNER — This kills the "scam" feeling -->
-    <div class="transparency-banner">
-      <i class="fas fa-shield-alt"></i>
-      <div>
-        <h4>⚡ Honest Transparency: Why the "Live Lab" uses Coinbase</h4>
-        <p>
-          The course is <strong>100% tuition-free</strong>. If you join the optional Live Lab, you’ll deposit funds 
-          <strong>into your own Coinbase account</strong> (we never touch your money). 
-          Hopeup Trading earns a small referral bonus from Coinbase <strong>at zero extra cost to you</strong>. 
-          If you don’t want to deposit, just take the free theory course — you’ll still learn 80% of the game!
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer container">
+        <p>&copy; 2026 <span>Hopeup Trading</span>. All rights reserved. | Built for serious traders.</p>
+        <p style="margin-top: 6px; font-size:13px; color:#8a8aaa;">
+            <i class="fas fa-shield-alt"></i> 100% risk-free — full refund if you're not satisfied after the first session.
         </p>
-      </div>
-    </div>
-
-    <div style="margin-top: 12px; font-size: 0.85rem; color: #64748b;">
-      <i class="fas fa-check-circle" style="color: #059669;"></i> U.S. residents only · 18+ · KYC required by law
-    </div>
-  </div>
-</section>
-
-<!-- ========== CURRICULUM ========== -->
-<section id="curriculum">
-  <div class="container">
-    <h2 class="section-title">What’s Inside the Course?</h2>
-    <p class="section-sub">No fluff. Just the exact steps to buy, sell, and secure your first crypto.</p>
-    
-    <div class="grid-3">
-      <div class="card">
-        <i class="fas fa-graduation-cap"></i>
-        <h3>Module 1: The Basics</h3>
-        <p>What is blockchain? Wallets vs. Exchanges. Why Bitcoin matters. No jargon, just plain English.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-user-shield"></i>
-        <h3>Module 2: Security 101</h3>
-        <p>2FA, seed phrases, and how to spot phishing scams. The #1 rule: Keep your keys offline.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-chart-line"></i>
-        <h3>Module 3: Your First Trade</h3>
-        <p>Market orders, limit orders, and reading a price chart. We press the buttons together.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-coins"></i>
-        <h3>Module 4: USDC & Stablecoins</h3>
-        <p>Why USDC is your safest on-ramp. How to use it to avoid volatile swings while learning.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-file-invoice"></i>
-        <h3>Module 5: U.S. Taxes</h3>
-        <p>What the IRS expects. How to track your cost basis. Stay clean from day one.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-handshake"></i>
-        <h3>Module 6: The "Live Lab"</h3>
-        <p>Optional walkthrough: deposit $100 via debit card, buy USDC, execute your first BTC trade.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== HOW IT WORKS (WITH REFERRAL EXPLANATION) ========== -->
-<section id="howitworks" style="background: #f1f5f9; border-radius: 0;">
-  <div class="container">
-    <h2 class="section-title">How to Get Started</h2>
-    <p class="section-sub">Two clear paths. Choose what fits your comfort level.</p>
-
-    <div class="steps">
-      <div class="step-grid">
-        <div class="step-item">
-          <div class="step-num">1</div>
-          <h4>📚 Enroll in Theory</h4>
-          <p>Click "Start Free Theory". No payment, no ID, no link needed. Just pure education.</p>
-        </div>
-        <div class="step-item">
-          <div class="step-num">2</div>
-          <h4>🤝 Opt into the Lab</h4>
-          <p>Ready to trade? Click "Join Live Lab" — you'll get our exclusive Coinbase partner link.</p>
-        </div>
-        <div class="step-item">
-          <div class="step-num">3</div>
-          <h4>✅ KYC in 5 Mins</h4>
-          <p>Upload your U.S. ID & selfie. Use your <strong>debit card</strong> (not ACH) to avoid the 7-day hold.</p>
-        </div>
-        <div class="step-item">
-          <div class="step-num">4</div>
-          <h4>🚀 Trade & Learn</h4>
-          <p>Deposit $100 → Buy $100 USDC → Buy $5 BTC. You've made history. We earn our referral.</p>
-        </div>
-      </div>
-
-      <div class="divider-line"></div>
-
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <i class="fas fa-check-circle" style="color: #059669; font-size: 1.6rem;"></i>
-          <div>
-            <strong style="font-size: 1rem;">Your $100 is always yours.</strong>
-            <p style="margin:0; color:#475569; font-size:0.9rem;">It stays in your Coinbase account. We never custody, touch, or manage your funds.</p>
-          </div>
-        </div>
-        <div style="display: flex; gap: 12px;">
-          <span style="background: #e2e8f0; padding: 4px 16px; border-radius: 40px; font-size:0.85rem; font-weight:600;">Coinbase</span>
-          <span style="background: #e2e8f0; padding: 4px 16px; border-radius: 40px; font-size:0.85rem; font-weight:600;">U.S. Legal</span>
-          <span style="background: #e2e8f0; padding: 4px 16px; border-radius: 40px; font-size:0.85rem; font-weight:600;">FDIC Bank</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== FAQ (Addressing the tough questions) ========== -->
-<section id="faq">
-  <div class="container">
-    <h2 class="section-title">Got Questions? We've Got Answers.</h2>
-    <p class="section-sub">We believe in radical transparency. Here’s what students ask most.</p>
-
-    <div class="faq-grid">
-      <div class="faq-item">
-        <h4>❓ Is this a paid course?</h4>
-        <p><strong>No.</strong> The entire curriculum is 100% free. The optional Live Lab uses a Coinbase referral link, but you pay nothing for the course itself.</p>
-      </div>
-      <div class="faq-item">
-        <h4>❓ Why do I need to deposit $100?</h4>
-        <p>That's the minimum requirement for Coinbase's U.S. referral program. It also ensures you're trading with "real skin in the game" so the lessons stick. You can withdraw it anytime.</p>
-      </div>
-      <div class="faq-item">
-        <h4>❓ Is Coinbase safe for U.S. residents?</h4>
-        <p>Yes. It's a NASDAQ-listed company (COIN), holds a U.S. BitLicense, and carries FDIC insurance on USD balances. It's the most regulated exchange in America.</p>
-      </div>
-      <div class="faq-item">
-        <h4>❓ Do I have to use your link?</h4>
-        <p>Not at all! You're welcome to take the Theory course and open any exchange you like. We only earn a reward if you use our partner link for the Live Lab.</p>
-      </div>
-      <div class="faq-item">
-        <h4>❓ What if my KYC gets rejected?</h4>
-        <p>It happens. We have a dedicated 3-min video tutorial inside the Lab that shows exactly how to take the selfie and scan your ID to pass on the first try.</p>
-      </div>
-      <div class="faq-item">
-        <h4>❓ Will this affect my taxes?</h4>
-        <p>Yes. Buying crypto isn't a taxable event, but selling or trading is. We dedicate an entire module to U.S. tax tracking so you're prepared for April 15th.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== FINAL CTA ========== -->
-<section style="background: #0f172a; color: white; padding: 60px 0; border-radius: 0;">
-  <div class="container" style="text-align: center;">
-    <h2 style="font-size: 2.4rem; font-weight: 700; margin-bottom: 12px;">Ready to Trade with Confidence?</h2>
-    <p style="color: #94a3b8; font-size: 1.15rem; max-width: 540px; margin: 0 auto 32px;">
-      Choose your path. No pressure, no tricks. Just real education and an optional on-ramp.
-    </p>
-    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;">
-      <a href="#" class="btn-secondary" style="background: #1e293b; border-color: #334155; color: white;">📖 Start Theory (Free)</a>
-      <a href="#" class="btn-primary">🚀 Join the Live Lab</a>
-    </div>
-    <p style="margin-top: 24px; font-size: 0.8rem; color: #64748b;">
-      <i class="fas fa-lock" style="margin-right: 6px;"></i> Your data is secure. 100% U.S. compliant. 18+ only.
-    </p>
-  </div>
-</section>
-
-<!-- ========== FOOTER ========== -->
-<footer class="footer">
-  <div class="container">
-    <div class="logo">Hopeup<span>Trading</span></div>
-    <p style="color: #94a3b8;">Empowering U.S. beginners to navigate crypto without fear, hype, or hidden fees.</p>
-    
-    <div class="disclaimer">
-      <strong>⚠️ Important Disclaimer:</strong> Hopeup Trading provides educational content only. We are not a financial advisor, broker, or registered investment firm. 
-      Cryptocurrency trading involves substantial risk of loss. Always do your own research (DYOR) and consult a licensed professional for tax or investment advice. 
-      Past performance does not guarantee future results. By using our referral link, you acknowledge that Hopeup Trading may receive a commission from Coinbase at no extra cost to you.
-    </div>
-
-    <div style="display: flex; gap: 24px; margin-top: 12px; font-size: 0.9rem;">
-      <a href="#" style="color: #94a3b8; text-decoration: none;">Privacy Policy</a>
-      <a href="#" style="color: #94a3b8; text-decoration: none;">Terms of Service</a>
-      <a href="#" style="color: #94a3b8; text-decoration: none;">Contact</a>
-    </div>
-    <p style="margin-top: 16px; font-size: 0.75rem; color: #475569;">© 2026 Hopeup Trading. Built for the U.S. market.</p>
-  </div>
-</footer>
+    </footer>
 
 </body>
 </html>
