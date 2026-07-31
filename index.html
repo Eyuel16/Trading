@@ -298,7 +298,7 @@
     .card h3 { font-size: 1.2rem; margin-bottom: 8px; }
     .card p { color: #64748b; font-size: 0.95rem; }
 
-    /* ----- PRICING CARD ----- */
+    /* ----- PRICING CARD (now with boxed feature list) ----- */
     .pricing-card {
       max-width: 440px;
       margin: 30px auto 0;
@@ -321,8 +321,37 @@
       display: block;
       margin-top: -4px;
     }
-    .pricing-card .includes { margin: 20px 0; color: #475569; }
-    .pricing-card .includes i { color: #059669; margin-right: 8px; }
+    .pricing-card .includes {
+      margin: 20px 0;
+      color: #475569;
+      text-align: left;
+    }
+    .pricing-card .includes .feature-box {
+      background: #f8fafc;
+      border-radius: 12px;
+      padding: 12px 16px;
+      margin-bottom: 10px;
+      border: 1px solid #eef2f6;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: 0.2s;
+    }
+    .pricing-card .includes .feature-box:hover {
+      border-color: #059669;
+      background: #f0fdf4;
+    }
+    .pricing-card .includes .feature-box i {
+      color: #059669;
+      font-size: 1.1rem;
+      width: 20px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .pricing-card .includes .feature-box span {
+      font-size: 0.95rem;
+      color: #0f172a;
+    }
     .pricing-card .note { font-size: 0.8rem; color: #94a3b8; margin-top: 16px; }
 
     /* ----- ABOUT PAGE ----- */
@@ -483,6 +512,24 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
     }
 
+    /* ----- JOTFORM IFRAME (new Contact page) ----- */
+    .jotform-wrapper {
+      background: white;
+      border-radius: 24px;
+      padding: 20px;
+      border: 1px solid #eef2f6;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+      text-align: center;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .jotform-wrapper iframe {
+      width: 100%;
+      height: 600px;
+      border: 0;
+      border-radius: 12px;
+    }
+
     /* ----- FOOTER ----- */
     .footer {
       background: #0f172a;
@@ -564,8 +611,8 @@
         <a href="#contact" data-page="contact">Contact</a>
         
         <div class="nav-social">
-          <a href="https://t.me/yourusername" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
-          <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://t.me/+19729042864" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+          <a href="https://wa.me/19729042864" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           <a href="mailto:support@hopeuptech.com" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
         
@@ -592,11 +639,11 @@
           <div class="pricing-card" style="max-width:100%; margin-top:30px;">
             <div class="price">$499 <small>One-time tuition · Live program</small></div>
             <div class="includes">
-              <p><i class="fas fa-check-circle"></i> Live, instructor-led online course</p>
-              <p><i class="fas fa-check-circle"></i> Advanced technical analysis framework</p>
-              <p><i class="fas fa-check-circle"></i> Private trader community &amp; live Q&A sessions</p>
-              <p><i class="fas fa-check-circle"></i> Downloadable trading plan &amp; journal templates</p>
-              <p><i class="fas fa-check-circle"></i> Access to recorded session replays</p>
+              <div class="feature-box"><i class="fas fa-check-circle"></i> <span>Live, instructor-led online course</span></div>
+              <div class="feature-box"><i class="fas fa-check-circle"></i> <span>Advanced technical analysis framework</span></div>
+              <div class="feature-box"><i class="fas fa-check-circle"></i> <span>Private trader community &amp; live Q&A sessions</span></div>
+              <div class="feature-box"><i class="fas fa-check-circle"></i> <span>Downloadable trading plan &amp; journal templates</span></div>
+              <div class="feature-box"><i class="fas fa-check-circle"></i> <span>Access to recorded session replays</span></div>
             </div>
             <a href="#course" class="btn-success" style="width:100%; padding:14px;">Secure Your Spot — Enroll Now</a>
             <p class="note"><i class="fas fa-lock"></i> Secure checkout · Instant access upon enrollment</p>
@@ -742,41 +789,37 @@
     </div>
   </section>
 
-  <!-- ============ PAGE: CONTACT ============ -->
+  <!-- ============ PAGE: CONTACT (with JotForm embed) ============ -->
   <section id="page-contact" class="page">
     <div class="container">
       <h2 class="section-title">Get in Touch</h2>
-      <p class="section-sub">Have questions about the curriculum, enrollment, or payment options? Our support team is ready to assist.</p>
+      <p class="section-sub">Have questions about the curriculum, enrollment, or payment options? Fill out the form below or reach out to us directly.</p>
 
       <div class="contact-wrapper">
-        <div class="contact-form">
-          <form action="#" method="post">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" placeholder="e.g. Alex Johnson" />
-            <label for="email">Email Address</label>
-            <input type="email" id="email" placeholder="alex@example.com" />
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" placeholder="Question about the course" />
-            <label for="message">Message</label>
-            <textarea id="message" rows="4" placeholder="Tell us what you need..."></textarea>
-            <button type="submit" class="btn-primary" style="width:100%; margin-top:20px;">
-              <i class="fas fa-paper-plane" style="margin-right:8px;"></i> Send Message
-            </button>
-          </form>
+        <!-- JotForm Embedded Application -->
+        <div class="jotform-wrapper">
+          <iframe 
+            id="JotFormIFrame-262117444947563" 
+            title="HopeupTech Inc." 
+            allow="geolocation; microphone; camera" 
+            src="https://www.jotform.com/app/262117444947563?appEmbedded=1" 
+            style="height:600px; width:100%; border: 0; border-radius: 12px;">
+          </iframe>
         </div>
 
+        <!-- Direct Contact Information -->
         <div class="contact-direct">
           <h3><i class="fas fa-headset" style="color:#2563eb;"></i> Connect Directly</h3>
           <p style="color:#64748b;">We typically reply within 24 hours. For urgent questions, reach out via Telegram or WhatsApp.</p>
           
           <div class="social-block">
-            <a href="https://t.me/yourusername" target="_blank" class="social-item">
+            <a href="https://t.me/+19729042864" target="_blank" class="social-item">
               <i class="fab fa-telegram-plane"></i>
-              <div><span>Telegram</span> <small>@HopeupTechSupport</small></div>
+              <div><span>Telegram</span> <small>+1 (972) 904-2864</small></div>
             </a>
-            <a href="https://wa.me/1234567890" target="_blank" class="social-item">
+            <a href="https://wa.me/19729042864" target="_blank" class="social-item">
               <i class="fab fa-whatsapp"></i>
-              <div><span>WhatsApp</span> <small>+1 (234) 567-890</small></div>
+              <div><span>WhatsApp</span> <small>+1 (972) 904-2864</small></div>
             </a>
             <a href="mailto:support@hopeuptech.com" class="social-item">
               <i class="fas fa-envelope"></i>
@@ -798,8 +841,8 @@
       <div class="logo-footer">HopeupTech <span style="font-weight:400; -webkit-text-fill-color:#94a3b8; color:#94a3b8;">Inc.</span></div>
       
       <div class="footer-socials">
-        <a href="https://t.me/yourusername" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
-        <a href="https://wa.me/1234567890" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://t.me/+19729042864" target="_blank" title="Telegram"><i class="fab fa-telegram-plane"></i></a>
+        <a href="https://wa.me/19729042864" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         <a href="mailto:support@hopeuptech.com" title="Email"><i class="fas fa-envelope"></i></a>
       </div>
 
