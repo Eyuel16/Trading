@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hopeup Trading – Course Ladder</title>
-    <!-- Font Awesome for Icons -->
+    <title>Hopeup Trading – Complete Course</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* --- Reset & Base --- */
         * {
             margin: 0;
             padding: 0;
@@ -22,17 +20,17 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* --- Header / Navigation --- */
+        /* Header */
         .header {
             background: #ffffff;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            padding: 20px 0;
-            border-bottom: 2px solid #e6b91e;
+            padding: 18px 0;
+            border-bottom: 3px solid #e6b91e;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -48,9 +46,9 @@
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 800;
-            letter-spacing: -1px;
+            letter-spacing: -0.5px;
             color: #0a1a3a;
         }
 
@@ -61,36 +59,16 @@
         .tagline {
             font-size: 14px;
             color: #4a4a6a;
-            font-weight: 400;
             background: #f0f4ff;
-            padding: 8px 18px;
+            padding: 6px 20px;
             border-radius: 30px;
             border: 1px solid #dce3f0;
         }
 
-        /* --- Hero Section --- */
+        /* Hero */
         .hero {
             text-align: center;
-            padding: 60px 0 40px 0;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            font-weight: 800;
-            line-height: 1.1;
-            color: #0a1a3a;
-            margin-bottom: 16px;
-        }
-
-        .hero h1 i {
-            color: #e6b91e;
-        }
-
-        .hero p {
-            font-size: 20px;
-            color: #4a4a6a;
-            max-width: 720px;
-            margin: 0 auto 30px auto;
+            padding: 50px 0 30px;
         }
 
         .hero .badge {
@@ -100,196 +78,182 @@
             font-weight: 700;
             padding: 6px 24px;
             border-radius: 40px;
-            font-size: 14px;
+            font-size: 13px;
             letter-spacing: 0.5px;
             text-transform: uppercase;
         }
 
-        /* --- Pricing Grid (The Ladder) --- */
-        .pricing-section {
-            padding: 40px 0 70px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            font-weight: 700;
-            margin-bottom: 10px;
+        .hero h1 {
+            font-size: 44px;
+            font-weight: 800;
+            line-height: 1.1;
             color: #0a1a3a;
+            margin: 16px 0 12px;
         }
 
-        .section-subtitle {
-            text-align: center;
-            color: #5a5a7a;
-            font-size: 18px;
-            margin-bottom: 50px;
+        .hero h1 i {
+            color: #e6b91e;
         }
 
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            align-items: stretch;
+        .hero p {
+            font-size: 19px;
+            color: #4a4a6a;
+            max-width: 680px;
+            margin: 0 auto 10px;
         }
 
-        /* --- Pricing Card --- */
-        .pricing-card {
+        /* Main Offer Card */
+        .offer-section {
+            padding: 30px 0 60px;
+        }
+
+        .offer-card {
             background: #ffffff;
-            border-radius: 24px;
-            padding: 35px 30px 40px;
-            box-shadow: 0 10px 40px rgba(10, 26, 58, 0.08);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-            border: 1px solid #edf2fa;
-            display: flex;
-            flex-direction: column;
+            border-radius: 30px;
+            padding: 45px 40px 50px;
+            box-shadow: 0 15px 60px rgba(10, 26, 58, 0.10);
+            border: 2px solid #e6b91e;
+            max-width: 800px;
+            margin: 0 auto;
             position: relative;
         }
 
-        .pricing-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(10, 26, 58, 0.12);
-        }
-
-        /* Featured / Most Popular */
-        .pricing-card.featured {
-            border: 2px solid #e6b91e;
-            background: #ffffff;
-            box-shadow: 0 15px 50px rgba(230, 185, 30, 0.15);
-        }
-
-        .pricing-card.featured .popular-badge {
+        .offer-card .popular-badge {
             background: #e6b91e;
             color: #0a1a3a;
             font-weight: 700;
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 4px 16px;
-            border-radius: 30px;
-            display: inline-block;
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            white-space: nowrap;
-        }
-
-        .card-header {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #eef2f8;
-            padding-bottom: 20px;
-        }
-
-        .card-header .level {
-            font-size: 14px;
-            font-weight: 600;
-            color: #e6b91e;
+            font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            padding: 6px 22px;
+            border-radius: 40px;
+            display: inline-block;
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        .card-header h3 {
-            font-size: 28px;
-            font-weight: 700;
-            color: #0a1a3a;
-            margin: 8px 0 4px;
+        .offer-card .price-block {
+            text-align: center;
+            padding: 20px 0 10px;
         }
 
-        .card-header .price {
-            font-size: 42px;
+        .offer-card .price-block .price {
+            font-size: 56px;
             font-weight: 800;
             color: #0a1a3a;
         }
 
-        .card-header .price small {
-            font-size: 18px;
+        .offer-card .price-block .price small {
+            font-size: 22px;
             font-weight: 400;
             color: #6a6a8a;
         }
 
-        .card-body {
-            flex: 1;
-            margin-bottom: 30px;
+        .offer-card .price-block .sub {
+            color: #6a6a8a;
+            font-size: 16px;
+            margin-top: 4px;
         }
 
-        .card-body ul {
-            list-style: none;
-            padding: 0;
+        .offer-card .price-block .value-badge {
+            display: inline-block;
+            background: #e8f0e8;
+            color: #1a5a2a;
+            font-weight: 600;
+            padding: 4px 18px;
+            border-radius: 30px;
+            font-size: 14px;
+            margin-top: 8px;
         }
 
-        .card-body ul li {
+        .divider {
+            border: none;
+            border-top: 2px dashed #e6eef5;
+            margin: 25px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px 30px;
             padding: 10px 0;
-            border-bottom: 1px solid #f4f7fd;
+        }
+
+        .features-grid .feature {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             gap: 12px;
-            color: #2a2a4a;
+            padding: 8px 0;
             font-size: 15px;
+            color: #1a1a3a;
+            border-bottom: 1px solid #f4f7fd;
         }
 
-        .card-body ul li:last-child {
-            border-bottom: 0;
-        }
-
-        .card-body ul li i {
+        .features-grid .feature i {
             color: #e6b91e;
             font-size: 16px;
             min-width: 20px;
-            margin-top: 2px;
         }
 
-        .card-footer {
-            margin-top: auto;
+        .features-grid .feature .highlight {
+            background: #f0f7ff;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #0a1a3a;
+            margin-left: 6px;
         }
 
         .btn {
             display: inline-block;
             width: 100%;
             text-align: center;
-            background: #0a1a3a;
-            color: #ffffff;
+            background: #e6b91e;
+            color: #0a1a3a;
             font-weight: 700;
-            padding: 16px 20px;
+            padding: 18px 20px;
             border-radius: 60px;
             text-decoration: none;
-            font-size: 18px;
+            font-size: 20px;
             transition: background 0.2s ease, transform 0.1s ease;
             border: none;
             cursor: pointer;
+            margin-top: 20px;
         }
 
         .btn:hover {
-            background: #1a2a5a;
-            transform: scale(1.02);
-        }
-
-        .btn.primary {
-            background: #e6b91e;
-            color: #0a1a3a;
-        }
-
-        .btn.primary:hover {
             background: #d4a80e;
+            transform: scale(1.01);
         }
 
         .btn i {
             margin-right: 10px;
         }
 
-        /* --- CTA / Bottom Section --- */
+        .btn-sub {
+            text-align: center;
+            font-size: 13px;
+            color: #7a7a9a;
+            margin-top: 12px;
+        }
+
+        /* CTA */
         .cta-section {
             background: #0a1a3a;
-            padding: 60px 20px;
+            padding: 50px 20px;
             border-radius: 40px;
-            margin: 20px 0 60px 0;
+            margin: 10px 0 50px;
             text-align: center;
             color: #ffffff;
         }
 
         .cta-section h2 {
-            font-size: 34px;
+            font-size: 30px;
             font-weight: 700;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .cta-section h2 i {
@@ -297,27 +261,32 @@
         }
 
         .cta-section p {
-            font-size: 18px;
+            font-size: 17px;
             color: #b0c0e0;
-            max-width: 600px;
-            margin: 0 auto 30px auto;
+            max-width: 550px;
+            margin: 0 auto 25px;
         }
 
-        .cta-section .btn {
-            max-width: 320px;
-            margin: 0 auto;
+        .cta-section .btn-cta {
+            display: inline-block;
             background: #e6b91e;
             color: #0a1a3a;
+            font-weight: 700;
+            padding: 16px 40px;
+            border-radius: 60px;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background 0.2s;
         }
 
-        .cta-section .btn:hover {
+        .cta-section .btn-cta:hover {
             background: #f5cc2e;
         }
 
-        /* --- Footer --- */
+        /* Footer */
         .footer {
             text-align: center;
-            padding: 30px 0;
+            padding: 25px 0;
             border-top: 1px solid #e2e8f0;
             color: #6a6a8a;
             font-size: 14px;
@@ -327,163 +296,102 @@
             color: #e6b91e;
         }
 
-        /* --- Responsive --- */
+        /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 32px;
+                font-size: 30px;
             }
-
-            .hero p {
-                font-size: 17px;
+            .offer-card {
+                padding: 30px 18px 35px;
             }
-
-            .section-title {
-                font-size: 28px;
+            .offer-card .price-block .price {
+                font-size: 42px;
             }
-
-            .pricing-grid {
+            .features-grid {
                 grid-template-columns: 1fr;
-                max-width: 420px;
-                margin: 0 auto;
+                gap: 4px;
             }
-
-            .card-header .price {
-                font-size: 34px;
-            }
-
-            .cta-section h2 {
-                font-size: 26px;
-            }
-
             .header .container {
                 flex-direction: column;
-                gap: 8px;
-                align-items: center;
+                gap: 6px;
                 text-align: center;
             }
-        }
-
-        @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 26px;
-            }
-
-            .pricing-card {
-                padding: 25px 18px;
+            .cta-section h2 {
+                font-size: 24px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- ===== HEADER ===== -->
+    <!-- HEADER -->
     <header class="header">
         <div class="container">
             <div class="logo">HOPEUP <span>TRADING</span></div>
-            <div class="tagline"><i class="fas fa-graduation-cap" style="margin-right: 8px;"></i> From Beginner to Pro</div>
+            <div class="tagline"><i class="fas fa-graduation-cap"></i> From Zero to Confident Trader</div>
         </div>
     </header>
 
-    <!-- ===== HERO ===== -->
+    <!-- HERO -->
     <section class="hero container">
-        <span class="badge"><i class="fas fa-rocket"></i> 2026 Cohort</span>
-        <h1>Your Trading <i>Ladder</i> to Success</h1>
-        <p>Choose the path that fits your goals. Start free or jump straight into advanced mastery — all backed by real market expertise.</p>
+        <span class="badge"><i class="fas fa-rocket"></i> 2026 Cohort – Limited Seats</span>
+        <h1>Everything You Need <i>in One</i> Course</h1>
+        <p>Beginner foundations + Advanced strategies + Personal Mentorship — all in one complete 8-week program.</p>
     </section>
 
-    <!-- ===== PRICING LADDER ===== -->
-    <section class="pricing-section container">
-        <h2 class="section-title">The <span style="color:#e6b91e;">Hopeup</span> Path</h2>
-        <p class="section-subtitle">24-hour live training, community support, and lifetime access to materials.</p>
+    <!-- OFFER CARD -->
+    <section class="offer-section container">
+        <div class="offer-card">
+            <span class="popular-badge"><i class="fas fa-star"></i> Best Value – All Inclusive</span>
 
-        <div class="pricing-grid">
-
-            <!-- CARD 1: BEGINNER -->
-            <div class="pricing-card">
-                <div class="card-header">
-                    <div class="level"><i class="fas fa-seedling"></i> Level 1</div>
-                    <h3>Beginner</h3>
-                    <div class="price">$499</div>
-                    <div style="color:#6a6a8a; font-size:14px;">4 Weeks · 24 Hours Live</div>
-                </div>
-                <div class="card-body">
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> Core fundamentals &amp; terminology</li>
-                        <li><i class="fas fa-check-circle"></i> Chart reading &amp; technical indicators</li>
-                        <li><i class="fas fa-check-circle"></i> Risk management basics</li>
-                        <li><i class="fas fa-check-circle"></i> Live Q&amp;A with the mentor</li>
-                        <li><i class="fas fa-check-circle"></i> Private community access</li>
-                    </ul>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn">Enroll Now <i class="fas fa-arrow-right"></i></a>
-                </div>
+            <div class="price-block">
+                <div class="price">$499 <small>USD</small></div>
+                <div class="sub">One-time payment · 8 Weeks · 30+ Live Hours</div>
+                <div class="value-badge"><i class="fas fa-tag"></i> Market value: $2,700+</div>
             </div>
 
-            <!-- CARD 2: ADVANCED (FEATURED) -->
-            <div class="pricing-card featured">
-                <span class="popular-badge"><i class="fas fa-star"></i> Most Popular</span>
-                <div class="card-header">
-                    <div class="level"><i class="fas fa-chart-line"></i> Level 2</div>
-                    <h3>Advanced</h3>
-                    <div class="price">$799</div>
-                    <div style="color:#6a6a8a; font-size:14px;">4 Weeks · 24 Hours Live</div>
-                </div>
-                <div class="card-body">
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> <strong>Everything in Beginner</strong>, plus:</li>
-                        <li><i class="fas fa-check-circle"></i> Advanced strategies (options &amp; margin)</li>
-                        <li><i class="fas fa-check-circle"></i> Algorithmic setup &amp; automation</li>
-                        <li><i class="fas fa-check-circle"></i> Live trade executions (walkthroughs)</li>
-                        <li><i class="fas fa-check-circle"></i> Weekly 1-on-1 feedback session</li>
-                        <li><i class="fas fa-check-circle"></i> Exclusive advanced indicators</li>
-                    </ul>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn primary">Enroll Now <i class="fas fa-arrow-right"></i></a>
-                </div>
+            <hr class="divider">
+
+            <div class="features-grid">
+                <div class="feature"><i class="fas fa-check-circle"></i> 30+ hours live training</div>
+                <div class="feature"><i class="fas fa-check-circle"></i> 8 weeks · 2 sessions/week</div>
+                <div class="feature"><i class="fas fa-check-circle"></i> Core fundamentals &amp; terminology</div>
+                <div class="feature"><i class="fas fa-check-circle"></i> Chart reading &amp; technical indicators</div>
+                <div class="feature"><i class="fas fa-check-circle"></i> Risk management &amp; position sizing</div>
+                <div class="feature"><i class="fas fa-check-circle"></i> Advanced strategies (options &amp; margin)</div>
+                <div class="feature"><i class="fas fa-check-circle"></i> Algorithmic &amp; bot setup <span class="highlight">BONUS</span></div>
+                <div class="feature"><i class="fas fa-check-circle"></i> Live trade walkthroughs (real money)</div>
+                <div class="feature"><i class="fas fa-check-circle"></i> <strong>4 x 1-on-1 sessions</strong> (30 min each)</div>
+                <div class="feature"><i class="fas fa-check-circle"></i> Direct mentor chat support</div>
+                <div class="feature"><i class="fas fa-check-circle"></i> Custom trading plan built for you</div>
+                <div class="feature"><i class="fas fa-check-circle"></i> Full portfolio risk audit</div>
+                <div class="feature"><i class="fas fa-check-circle"></i> Exclusive proprietary indicators</div>
+                <div class="feature"><i class="fas fa-check-circle"></i> Lifetime course updates</div>
+                <div class="feature"><i class="fas fa-check-circle"></i> Private alumni network access</div>
+                <div class="feature"><i class="fas fa-check-circle"></i> Personalized certificate</div>
             </div>
 
-            <!-- CARD 3: MENTORSHIP -->
-            <div class="pricing-card">
-                <div class="card-header">
-                    <div class="level"><i class="fas fa-crown"></i> Level 3</div>
-                    <h3>Mentorship</h3>
-                    <div class="price">$1,500</div>
-                    <div style="color:#6a6a8a; font-size:14px;">8 Weeks · Intensive</div>
-                </div>
-                <div class="card-body">
-                    <ul>
-                        <li><i class="fas fa-check-circle"></i> <strong>Everything in Advanced</strong>, plus:</li>
-                        <li><i class="fas fa-check-circle"></i> 1-on-1 personalized strategy design</li>
-                        <li><i class="fas fa-check-circle"></i> Full portfolio risk audit</li>
-                        <li><i class="fas fa-check-circle"></i> Direct mentor access (Telegram/Signal)</li>
-                        <li><i class="fas fa-check-circle"></i> Custom trading plan built for you</li>
-                        <li><i class="fas fa-check-circle"></i> Lifetime updates &amp; alumni network</li>
-                    </ul>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn">Apply Now <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
+            <hr class="divider">
 
+            <a href="#" class="btn"><i class="fas fa-arrow-right"></i> Enroll Now – Only $499</a>
+            <div class="btn-sub"><i class="fas fa-shield-alt"></i> 14-day satisfaction guarantee · Limited spots</div>
         </div>
     </section>
 
-    <!-- ===== CTA / DISCLAIMER ===== -->
+    <!-- CTA / FREE CALL -->
     <div class="container">
         <div class="cta-section">
-            <h2><i class="fas fa-flag-checkered"></i> Not sure which tier?</h2>
-            <p>Book a free 15-minute discovery call with our team. We'll assess your current level and recommend the perfect starting point.</p>
-            <a href="#" class="btn"><i class="fas fa-calendar-check"></i> Book a Free Call</a>
+            <h2><i class="fas fa-phone"></i> Not sure yet?</h2>
+            <p>Book a free 15-minute discovery call. We'll discuss your goals and see if this course is the right fit.</p>
+            <a href="#" class="btn-cta"><i class="fas fa-calendar-check"></i> Book a Free Call</a>
         </div>
     </div>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- FOOTER -->
     <footer class="footer container">
-        <p>&copy; 2026 <span>Hopeup Trading</span>. All rights reserved. | Built for serious traders.</p>
-        <p style="margin-top: 6px; font-size:13px; color:#8a8aaa;">
-            <i class="fas fa-shield-alt"></i> 100% risk-free — full refund if you're not satisfied after the first session.
+        <p>&copy; 2026 <span>Hopeup Trading</span>. All rights reserved.</p>
+        <p style="margin-top: 4px; font-size: 13px; color: #8a8aaa;">
+            <i class="fas fa-lock"></i> Secure checkout · No hidden fees
         </p>
     </footer>
 
