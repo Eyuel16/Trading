@@ -50,26 +50,15 @@
     }
 
     .logo {
-      font-size: 1.6rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
       display: flex;
       align-items: center;
       gap: 8px;
+      text-decoration: none;
     }
-    .logo .tech {
-      background: linear-gradient(135deg, #4facfe, #00f2fe);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .logo .inc {
-      font-weight: 400;
-      color: #8899aa;
-      font-size: 0.8rem;
-      -webkit-text-fill-color: #8899aa;
-      border-left: 1px solid #2a3a4a;
-      padding-left: 10px;
+    .logo img {
+      height: 40px;
+      width: auto;
+      display: block;
     }
     .logo .badge-canada {
       background: #1a2a3a;
@@ -79,8 +68,8 @@
       padding: 2px 10px;
       border-radius: 40px;
       letter-spacing: 0.5px;
-      -webkit-text-fill-color: #4facfe;
       border: 1px solid #2a4a6a;
+      margin-left: 4px;
     }
 
     .nav-links {
@@ -614,6 +603,7 @@
       .contact-app .social-row { gap: 12px; }
       .contact-app .social-row a { padding: 10px 16px; font-size: 0.8rem; }
       .curriculum-module { padding: 24px 16px; }
+      .logo img { height: 32px; }
     }
   </style>
 </head>
@@ -622,10 +612,11 @@
   <!-- ============ NAVIGATION ============ -->
   <nav class="navbar">
     <div class="container">
-      <div class="logo">
-        <span class="tech">HopeupTech</span><span class="inc">Inc.</span>
+      <a href="#home" class="logo">
+        <!-- ***** REPLACE THE SRC PATH BELOW WITH THE CORRECT PATH TO YOUR LOGO FILE ***** -->
+        <img src="download16.png" alt="HopeUp Tech Inc." />
         <span class="badge-canada"><i class="fas fa-maple-leaf" style="margin-right:4px;"></i>CANADA</span>
-      </div>
+      </a>
       <div class="nav-links" id="navLinks">
         <a href="#home" class="active" data-page="home">Home</a>
         <a href="#about" data-page="about">About</a>
@@ -672,7 +663,6 @@
           </div>
         </div>
         <div class="hero-image">
-          <!-- Updated Hero Image: Bitcoin Visual -->
           <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=600&fit=crop&crop=center" alt="Bitcoin and crypto trading visual" />
         </div>
       </div>
@@ -715,7 +705,6 @@
           </div>
         </div>
         <div>
-          <!-- Updated About Image: Trading Chart & Analysis -->
           <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop&crop=center" alt="Professional trading analysis" />
         </div>
       </div>
@@ -730,7 +719,6 @@
   <!-- ============ PAGE: COURSE ============ -->
   <section id="page-course" class="page">
     <div class="container">
-      <!-- Updated Course Banner: Modern Tech/Finance Workspace -->
       <img class="section-banner" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=300&fit=crop&crop=center" alt="Crypto trading curriculum banner" />
       
       <h2 class="section-title">📚 The Structured Curriculum</h2>
