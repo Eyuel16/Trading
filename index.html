@@ -494,37 +494,17 @@
       border-left: 5px solid #4facfe;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       transition: 0.2s;
-      display: flex;
-      gap: 30px;
-      align-items: flex-start;
     }
     .curriculum-module:hover {
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     }
-    .curriculum-module .module-icon {
-      flex-shrink: 0;
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
-      overflow: hidden;
-      background: #0b0f19;
-      border: 1px solid #1e2a3a;
-    }
-    .curriculum-module .module-icon img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .curriculum-module .module-content {
-      flex: 1;
-    }
-    .curriculum-module .module-content h3 {
+    .curriculum-module h3 {
       font-size: 1.4rem;
       font-weight: 700;
       color: #e8edf5;
       margin-bottom: 4px;
     }
-    .curriculum-module .module-content .module-sub {
+    .curriculum-module .module-sub {
       color: #4facfe;
       font-weight: 600;
       font-size: 0.85rem;
@@ -532,41 +512,33 @@
       margin-bottom: 14px;
       display: block;
     }
-    .curriculum-module .module-content .module-desc {
+    .curriculum-module .module-desc {
       color: #b0c4dd;
       font-size: 0.95rem;
       margin-bottom: 16px;
     }
-    .curriculum-module .module-content ul {
+    .curriculum-module ul {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 6px 24px;
       padding-left: 20px;
       list-style: none;
     }
-    .curriculum-module .module-content ul li {
+    .curriculum-module ul li {
       color: #b0c4dd;
       margin-bottom: 6px;
       position: relative;
       padding-left: 20px;
       font-size: 0.95rem;
     }
-    .curriculum-module .module-content ul li::before {
+    .curriculum-module ul li::before {
       content: "▹";
       color: #4facfe;
       position: absolute;
       left: 0;
     }
     @media (max-width: 600px) {
-      .curriculum-module {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .curriculum-module .module-content ul {
-        grid-template-columns: 1fr;
-        text-align: left;
-      }
+      .curriculum-module ul { grid-template-columns: 1fr; }
     }
 
     .section-banner {
@@ -700,7 +672,8 @@
           </div>
         </div>
         <div class="hero-image">
-          <img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d?w=800&h=600&fit=crop&crop=center" alt="Bitcoin and crypto trading dashboard" />
+          <!-- Updated Hero Image: Bitcoin Visual -->
+          <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=800&h=600&fit=crop&crop=center" alt="Bitcoin and crypto trading visual" />
         </div>
       </div>
 
@@ -742,7 +715,8 @@
           </div>
         </div>
         <div>
-          <img src="https://images.unsplash.com/photo-1642104704073-0f91a6f4b2d8?w=800&h=600&fit=crop&crop=center" alt="Professional trader analyzing crypto charts" />
+          <!-- Updated About Image: Trading Chart & Analysis -->
+          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&h=600&fit=crop&crop=center" alt="Professional trading analysis" />
         </div>
       </div>
 
@@ -756,101 +730,77 @@
   <!-- ============ PAGE: COURSE ============ -->
   <section id="page-course" class="page">
     <div class="container">
-      <img class="section-banner" src="https://images.unsplash.com/photo-1639322537228-f710d846310a?w=1200&h=300&fit=crop&crop=center" alt="Crypto trading education and learning" />
+      <!-- Updated Course Banner: Modern Tech/Finance Workspace -->
+      <img class="section-banner" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=300&fit=crop&crop=center" alt="Crypto trading curriculum banner" />
       
       <h2 class="section-title">📚 The Structured Curriculum</h2>
       <p class="section-sub" style="max-width:720px;">This isn't a collection of random YouTube clips. It is a rigorous, step-by-step live program designed to take you from zero to a repeatable trading framework. Every module builds on the last.</p>
 
       <!-- Module 1 -->
       <div class="curriculum-module">
-        <div class="module-icon">
-          <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=64&h=64&fit=crop&crop=center" alt="Bitcoin" />
-        </div>
-        <div class="module-content">
-          <h3>Section 1: Foundations of Active Trading</h3>
-          <span class="module-sub">Module 1 · The Blueprint</span>
-          <p class="module-desc">Establish a professional-grade foundation. Understand the critical difference between trading and investing, why crypto markets are structurally unique, and how to mentally transition from a spectator to an active participant.</p>
-          <ul>
-            <li>Trading vs. Investing (The Mindset Shift)</li>
-            <li>Long & Short Mechanics Explained</li>
-            <li>Crypto Market Structure & Asset Classes</li>
-            <li>Fundamental vs. Technical Analysis</li>
-          </ul>
-        </div>
+        <h3>Section 1: Foundations of Active Trading</h3>
+        <span class="module-sub">Module 1 · The Blueprint</span>
+        <p class="module-desc">Establish a professional-grade foundation. Understand the critical difference between trading and investing, why crypto markets are structurally unique, and how to mentally transition from a spectator to an active participant.</p>
+        <ul>
+          <li>Trading vs. Investing (The Mindset Shift)</li>
+          <li>Long & Short Mechanics Explained</li>
+          <li>Crypto Market Structure & Asset Classes</li>
+          <li>Fundamental vs. Technical Analysis</li>
+        </ul>
       </div>
 
       <!-- Module 2 -->
       <div class="curriculum-module">
-        <div class="module-icon">
-          <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=64&h=64&fit=crop&crop=center" alt="Trading charts" />
-        </div>
-        <div class="module-content">
-          <h3>Section 2: Technical Analysis & Chart Reading</h3>
-          <span class="module-sub">Module 2 · Reading the Market</span>
-          <p class="module-desc">Learn to read the story behind the candles. We cover everything from classic patterns to institutional-level support/resistance and the exact moving averages professionals watch.</p>
-          <ul>
-            <li>Candlestick Psychology & Market Structure</li>
-            <li>Dynamic Support, Resistance & Role Reversal</li>
-            <li>Breakout/Breakdown Mechanics & False Signals</li>
-            <li>Chart Patterns: Head & Shoulders, Triangles, Flags</li>
-            <li>Moving Averages (SMA, EMA, Golden/Death Cross)</li>
-            <li>Multi-Timeframe Analysis (The Trader's Edge)</li>
-          </ul>
-        </div>
+        <h3>Section 2: Technical Analysis & Chart Reading</h3>
+        <span class="module-sub">Module 2 · Reading the Market</span>
+        <p class="module-desc">Learn to read the story behind the candles. We cover everything from classic patterns to institutional-level support/resistance and the exact moving averages professionals watch.</p>
+        <ul>
+          <li>Candlestick Psychology & Market Structure</li>
+          <li>Dynamic Support, Resistance & Role Reversal</li>
+          <li>Breakout/Breakdown Mechanics & False Signals</li>
+          <li>Chart Patterns: Head & Shoulders, Triangles, Flags</li>
+          <li>Moving Averages (SMA, EMA, Golden/Death Cross)</li>
+          <li>Multi-Timeframe Analysis (The Trader's Edge)</li>
+        </ul>
       </div>
 
       <!-- Module 3 -->
       <div class="curriculum-module">
-        <div class="module-icon">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=64&h=64&fit=crop&crop=center" alt="Risk management" />
-        </div>
-        <div class="module-content">
-          <h3>Section 3: Professional Risk Management</h3>
-          <span class="module-sub">Module 3 · Capital Preservation</span>
-          <p class="module-desc">Survival is the first rule of trading. We teach you the non-negotiable rules of position sizing, stop-loss placement, and how to structure your trades so that a single losing day never wipes out your account.</p>
-          <ul>
-            <li>The 1% Rule & Position Sizing Formula</li>
-            <li>Calculating Risk-to-Reward Ratios</li>
-            <li>Stop-Loss Placement (Technical vs. Volatility-based)</li>
-            <li>Managing Drawdowns & Emotional Discipline</li>
-          </ul>
-        </div>
+        <h3>Section 3: Professional Risk Management</h3>
+        <span class="module-sub">Module 3 · Capital Preservation</span>
+        <p class="module-desc">Survival is the first rule of trading. We teach you the non-negotiable rules of position sizing, stop-loss placement, and how to structure your trades so that a single losing day never wipes out your account.</p>
+        <ul>
+          <li>The 1% Rule & Position Sizing Formula</li>
+          <li>Calculating Risk-to-Reward Ratios</li>
+          <li>Stop-Loss Placement (Technical vs. Volatility-based)</li>
+          <li>Managing Drawdowns & Emotional Discipline</li>
+        </ul>
       </div>
 
       <!-- Module 4 -->
       <div class="curriculum-module">
-        <div class="module-icon">
-          <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=64&h=64&fit=crop&crop=center" alt="Trading plan" />
-        </div>
-        <div class="module-content">
-          <h3>Section 4: Building Your Trading Plan</h3>
-          <span class="module-sub">Module 4 · The Operating System</span>
-          <p class="module-desc">A trader without a plan is a gambler. We walk you through creating a personalized, written trading plan that outlines your entry rules, exit criteria, and daily routines to ensure consistency.</p>
-          <ul>
-            <li>The 7 Components of a Professional Trading Plan</li>
-            <li>Defining Entry Triggers & Exit Rules</li>
-            <li>Backtesting: Validating Your Strategy</li>
-            <li>Sample Trading Plan for Beginners</li>
-          </ul>
-        </div>
+        <h3>Section 4: Building Your Trading Plan</h3>
+        <span class="module-sub">Module 4 · The Operating System</span>
+        <p class="module-desc">A trader without a plan is a gambler. We walk you through creating a personalized, written trading plan that outlines your entry rules, exit criteria, and daily routines to ensure consistency.</p>
+        <ul>
+          <li>The 7 Components of a Professional Trading Plan</li>
+          <li>Defining Entry Triggers & Exit Rules</li>
+          <li>Backtesting: Validating Your Strategy</li>
+          <li>Sample Trading Plan for Beginners</li>
+        </ul>
       </div>
 
       <!-- Module 5 -->
       <div class="curriculum-module">
-        <div class="module-icon">
-          <img src="https://images.unsplash.com/photo-1526947425960-945c6e72858f?w=64&h=64&fit=crop&crop=center" alt="Trading psychology" />
-        </div>
-        <div class="module-content">
-          <h3>Section 5: Trading Psychology & Discipline</h3>
-          <span class="module-sub">Module 5 · Mastering the Mind</span>
-          <p class="module-desc">Your strategy can be perfect, but if your psychology is broken, you will lose. Learn how to identify and neutralize fear, greed, revenge, and hope—the four emotions that destroy accounts.</p>
-          <ul>
-            <li>The 4 Deadly Emotions & How to Counter Them</li>
-            <li>Rules to Protect Yourself from Yourself</li>
-            <li>The Trading Journal: Your Path to Continuous Improvement</li>
-            <li>Building Unshakeable Discipline & Patience</li>
-          </ul>
-        </div>
+        <h3>Section 5: Trading Psychology & Discipline</h3>
+        <span class="module-sub">Module 5 · Mastering the Mind</span>
+        <p class="module-desc">Your strategy can be perfect, but if your psychology is broken, you will lose. Learn how to identify and neutralize fear, greed, revenge, and hope—the four emotions that destroy accounts.</p>
+        <ul>
+          <li>The 4 Deadly Emotions & How to Counter Them</li>
+          <li>Rules to Protect Yourself from Yourself</li>
+          <li>The Trading Journal: Your Path to Continuous Improvement</li>
+          <li>Building Unshakeable Discipline & Patience</li>
+        </ul>
       </div>
 
       <!-- Final CTA -->
